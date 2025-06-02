@@ -1,3 +1,5 @@
+/* base */
+
 body {
     margin: 0;
     padding: 0;
@@ -7,6 +9,8 @@ body {
 * {
     font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
 }
+
+/* ul li animation */
 
 .uul {
     display: flex;
@@ -77,14 +81,43 @@ body {
     background: #ee3a3a;
 }
 
-.ulah:hover {
-    background-color: rgb(255, 158, 158);
-    border-radius: 8px;
+
+/* hover tag for navbar */
+
+.ulah a {
+    color: white !important;
+    font-weight: bold;
 }
 
 .ulah:hover a {
     color: #ff4c68 !important;
 }
+
+.ulah:hover {
+    background-color: rgb(255, 158, 158);
+    border-radius: 8px;
+}
+
+/* nav gradient */
+
+.nani {
+    color: white;
+}
+
+.nani:hover{
+  background-image: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  font-weight: bold;
+  
+  background-size: 300%;
+  background-position: -100%;  
+  
+  animation: gradient-animation 3s infinite linear;
+}
+
+/* gradient animation */
 
 .gradient-background {
     background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
@@ -105,44 +138,28 @@ body {
         background-position: 0% 50%;
     }
 }
-.ulah a {
-    color: white !important;
-    font-weight: bold;
-}
 
-#header {
-    background-color: #292626;
-}
+/* use for make 5's a href to the right end */
 
-.nani {
-    color: white;
-}
-
-.nani:hover{
-  background-image: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-  -webkit-background-clip: text; 
-  background-clip: text; 
-  color: transparent;
-  font-weight: bold;
-  
-  background-size: 300%;
-  background-position: -100%;  
-  
-  animation: gradient-animation 3s infinite linear;
-}
 
 .mmm-auto {
     margin-left: auto !important;
 }
 
+/* use for overwrite nav collapse boostrap to more visible */
+
 .make-nav-btn-color {
     background-color: rgb(122, 120, 120) !important;
 }
+
+/* just for make it to the center */
 
 .move-to-center {
     display: grid;
     justify-content: center;
 }
+
+/* section background */
 
 #about {
     background-color: #262626;
@@ -150,4 +167,8 @@ body {
 
 #project {
     background-color: #ffedd2;
+}
+
+#header {
+    background-color: #292626;
 }
