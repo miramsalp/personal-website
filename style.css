@@ -1,10 +1,93 @@
-#heading {
-    background-color: #A6AEBF;
+body {
+    margin: 0;
+    padding: 0;
+    background: #262626;
 }
 
+* {
+    font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+}
+
+.uul {
+    display: flex;
+    padding-left: 0;
+}
+
+.uul .lli {
+    list-style: none;
+}
+
+.uul .lli a {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+}
+
+.uul .lli a .icon {
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+}
+
+.uul .lli a:hover .icon {
+    color: #fff;
+    /* transform: rotateY(360deg); */
+}
+
+.uul .lli a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f00;
+    transition: .5s;
+    z-index: 2;
+}
+
+.profilepic {
+    border-radius: 50%;
+}
+
+.uul .lli a:hover:before {
+    top: 0;
+}
+
+.uul .lli:nth-child(1) a:before {
+    background: #1d1d1d;
+}
+
+.uul .lli:nth-child(2) a:before {
+    background: #0077b5;
+}
+
+.uul .lli:nth-child(3) a:before {
+    background: #ee3a3a;
+}
+
+.ulah:hover {
+    background-color: rgb(255, 158, 158);
+    border-radius: 8px;
+}
+
+.ulah:hover a {
+    color: #ff4c68 !important;
+}
 
 .gradient-background {
-    background: linear-gradient(300deg, #C5D3E8, #D0E8C5);
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
 }
@@ -13,10 +96,51 @@
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
+.ulah a {
+    color: white !important;
+    font-weight: bold;
+}
+
+#header {
+    background-color: #292626;
+}
+
+.nani {
+    color: white;
+}
+
+.nani:hover{
+  background-image: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  font-weight: bold;
+  
+  background-size: 300%;
+  background-position: -100%;  
+  
+  animation: gradient-animation 3s infinite linear;
+}
+
+.mmm-auto {
+    margin-left: auto !important;
+}
+
+.make-nav-btn-color {
+    background-color: rgb(122, 120, 120) !important;
+}
+
+.move-to-center {
+    display: grid;
+    justify-content: center;
+}
+
