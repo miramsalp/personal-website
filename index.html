@@ -50,7 +50,7 @@
   </section>
 
   <section id="heroes" class="gradient-background">
-    <div class="container col-xxl-8 px-4 py-5">
+    <div class="container col-xxl-8 px-4 py-5" style="height: 60vh;">
       <div class="row flex-lg align-items-center g-5 py-5">
         <!-- move-to-center use for responsive when go on small screen -->
         <div class="col-lg-6 col-sm-12 move-to-center">
@@ -74,48 +74,39 @@
   </section>
 
   <section id="about">
-    <div class="container my-5">
-      <div class="p-5 text-center bg-body-tertiary rounded-3"> <img src="./assets/myprofilepic.jpg" class="profilepic"
+    <div class="container">
+      <div class="p-5 text-center rounded-3"> <img src="./assets/myprofilepic.jpg" class="profilepic"
           style="height: 100px; width: 100px;" />
-        <h1 class="text-body-emphasis">About me</h1>
-        <p class="col-lg-8 mx-auto fs-5 text-muted">
+        <h1 class="text-light">About me</h1>
+        <p class="col-lg-8 mx-auto fs-5 text-light">
           I'm currently a Computer Engineering student. I enjoy playing basketball, although I haven't played in about a
           year. I also love eating KFC.
         </p>
-        <div class="d-inline-flex gap-2 mb-5"> <button
-            class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
-            Call to action
-            <svg class="bi ms-2" width="24" height="24" aria-hidden="true">
-              <use xlink:href="#arrow-right-short"></use>
-            </svg> </button> <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-            Secondary link
-          </button> </div>
-      </div>
+
     </div>
   </section>
 
   <section id="project">
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg align-items-center g-5 py-5">
-        <div class="col-10 col-sm-12 col-lg-6 move-to-center"> <img src="./assets/demo.gif"
+        <div class="col-10 col-sm-12 col-lg-6 move-to-center"><a href="https://github.com/miramsalp/vga-image-switcher" target="_blank"><img src="./assets/demo.gif"
             class="d-block mx-lg-auto img-fluid" alt="demo of vga image switcher" width="300" height="200"
-            loading="lazy"> </div>
+            loading="lazy"></a> </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">VGA Image Switcher</h1>
           <p class="lead">A hardware project built on the Basys3 FPGA board that displays 3 different images on a VGA
             monitor. Users can switch between images in real time using SW0 and SW1. Image data is stored in memory and
             rendered frame by frame via Verilog.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
-              class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> <button type="button"
-              class="btn btn-outline-secondary btn-lg px-4">Default</button> </div>
+              class="btn btn-primary btn-lg px-4 me-md-2"><a href="https://github.com/miramsalp/vga-image-switcher" target="_blank" class = "nav-link">Link to repo</a></button></div>
         </div>
       </div>
     </div>
     <div class="container col-xxl-8 px-4 py-5">
       <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-10 col-sm-12 col-lg-6 justify-content-center"> <img src="./assets/demoblog.PNG"
+        <div class="col-10 col-sm-12 col-lg-6 justify-content-center"><a href="https://miramsalp.github.io/salp-journey/" target="_blank"><img src="./assets/demoblog.PNG"
             class="d-block mx-lg-auto img-fluid" alt="demo of vga image switcher" width="700" height="500"
-            loading="lazy"> </div>
+            loading="lazy"></a> </div>
         <div class="col-lg-6">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Salp's Journey</h1>
           <p class="lead">A personal blog built using HTML, CSS (Bootstrap), and vanilla JavaScript.
@@ -123,8 +114,7 @@
             simplicity.
             It serves as a space to document my learning journey.</p>
           <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
-              class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> <button type="button"
-              class="btn btn-outline-secondary btn-lg px-4">Default</button> </div>
+              class="btn btn-primary btn-lg px-4 me-md-2"><a href="https://github.com/miramsalp/salp-journey" target="_blank" class = "nav-link">Link to repo</a></button></div>
         </div>
       </div>
     </div>
