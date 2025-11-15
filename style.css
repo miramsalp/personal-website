@@ -1,174 +1,149 @@
 /* base */
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #262626;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
 }
 
-* {
-    font-family: "Inter", "Segoe UI", "Roboto", sans-serif;
+.hero-socials .social-icon {
+  font-size: 2.2rem; /* Was 35px */
+  color: #262626;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* ul li animation */
-
-.uul {
-    display: flex;
-    padding-left: 0;
+.hero-socials .social-icon:hover {
+  transform: translateY(-5px);
 }
-
-.uul .lli {
-    list-style: none;
-}
-
-.uul .lli a {
-    width: 80px;
-    height: 80px;
-    background-color: #fff;
-    text-align: center;
-    line-height: 80px;
-    font-size: 35px;
-    margin: 0 10px;
-    display: block;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
-    border: 3px solid #fff;
-    z-index: 1;
-}
-
-.uul .lli a .icon {
-    position: relative;
-    color: #262626;
-    transition: .5s;
-    z-index: 3;
-}
-
-.uul .lli a:hover .icon {
-    color: #fff;
-    /* transform: rotateY(360deg); */
-}
-
-.uul .lli a:before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #f00;
-    transition: .5s;
-    z-index: 2;
-}
+.hero-socials a[href*="github.com"]:hover { color: #1d1d1d; }
+.hero-socials a[href*="linkedin.com"]:hover { color: #0077b5; }
+.hero-socials a[href*="mailto:"]:hover { color: #ee3a3a; }
 
 .profilepic {
-    border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover; 
 }
 
-.uul .lli a:hover:before {
-    top: 0;
-}
-
-.uul .lli:nth-child(1) a:before {
-    background: #1d1d1d;
-}
-
-.uul .lli:nth-child(2) a:before {
-    background: #0077b5;
-}
-
-.uul .lli:nth-child(3) a:before {
-    background: #ee3a3a;
-}
-
-
-/* hover tag for navbar */
 
 .ulah a {
-    color: white !important;
-    font-weight: bold;
+  color: white !important; 
+  font-weight: bold;
 }
 
 .ulah:hover a {
-    color: #ff4c68 !important;
+  color: #ff4c68 !important;
 }
 
 .ulah:hover {
-    background-color: rgb(255, 158, 158);
-    border-radius: 8px;
+  background-color: rgb(255, 158, 158);
+  border-radius: 8px;
 }
 
 /* nav gradient */
 
 .nani {
-    color: white;
+  color: white;
+  font-weight: bold;
 }
 
-.nani:hover{
+.nani:hover {
   background-image: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-  -webkit-background-clip: text; 
-  background-clip: text; 
+  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   font-weight: bold;
-  
+
   background-size: 300%;
-  background-position: -100%;  
-  
+  background-position: -100%;
+
   animation: gradient-animation 3s infinite linear;
 }
 
 /* gradient animation */
 
 .gradient-background {
-    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
+  background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
 }
 
 @keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-    }
+  0% {
+    background-position: 0% 50%;
+  }
 
-    50% {
-        background-position: 100% 50%;
-    }
+  50% {
+    background-position: 100% 50%;
+  }
 
-    100% {
-        background-position: 0% 50%;
-    }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* use for make 5's a href to the right end */
-
-
-.mmm-auto {
-    margin-left: auto !important;
+.navbar-toggler.make-nav-btn-color {
+  background-color: rgb(122, 120, 120);
 }
-
-/* use for overwrite nav collapse boostrap to more visible */
-
-.make-nav-btn-color {
-    background-color: rgb(122, 120, 120) !important;
-}
-
-/* just for make it to the center */
-
-.move-to-center {
-    display: grid;
-    justify-content: center;
-}
-
-/* section background */
 
 #about {
-    background-color: #262626;
+  background-color: #262626;
 }
 
 #project {
-    background-color: #ffedd2;
+  background-color: #ffedd2;
 }
 
 #header {
-    background-color: #292626;
+  background-color: #292626;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%; 
+  aspect-ratio: 16 / 9; 
+  object-fit: cover; 
+}
+
+.project-card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project-card-body .btn {
+  margin-top: auto;   
+  align-self: center; 
+  min-width: 150px;   
+}
+
+.btn-theme {
+  background-color: #ff4c68;
+  border-color: #ff4c68;
+  color: #fff;
+  font-weight: bold;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-theme:hover {
+  background-color: rgb(255, 158, 158);
+  border-color: rgb(255, 158, 158);
+  color: #262626; 
 }

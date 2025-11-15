@@ -10,6 +10,7 @@
             margin: 0;
             padding: 40px;
             background-color: #f4f4f4;
+            color: #333;
         }
 
         .resume-box {
@@ -39,10 +40,13 @@
             margin-bottom: 10px;
             font-size: 1.1em;
             font-weight: bold;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
         }
 
         ul {
             padding-left: 20px;
+            list-style: none;
         }
 
         li {
@@ -52,16 +56,36 @@
         .small-text {
             font-size: 0.95em;
             color: #333;
+            line-height: 1.5;
+        }
+        
+        .skills-list li {
+            margin-bottom: 8px;
         }
 
         .project-block {
-            margin-bottom: 25px;
+            /* Added more space between projects */
+            margin-bottom: 30px; 
         }
-
-        .project-divider {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 15px 0 25px 0;
+        
+        .project-block p {
+            margin: 5px 0;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+        
+        .project-title a {
+            font-size: 0.9em;
+            font-weight: normal;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        .project-desc {
+            font-style: italic;
+            margin-bottom: 10px !important;
         }
 
         .project-block ul {
@@ -80,6 +104,16 @@
             left: -1em;
             color: #555;
         }
+        
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 
@@ -90,88 +124,82 @@
         <div class="centered">
             <h2>Thanapat Aupprathumwipanon</h2>
             <p>68/70 Ekkachai 10/1 Road, Bang Khun Thian, Chom Thong, Bangkok 10150</p>
-            <p>Tel: +66 99-009-0809</p>
-            <p>Email: Thanapat_petch@hotmail.com</p>
+            <p>Tel: +66 99-009-0809 | Email: thanapat.aupp@outlook.com</p>
+            <p>Github: <a href="https://github.com/miramsalp" target="_blank">github.com/miramsalp</a></p>
         </div>
 
-        <hr>
-
-        <div class="section">
-            <h3>Objective</h3>
-            <p class="small-text">
-                Motivated and ambitious sophomore in Computer Engineering, seeking an internship to develop hands-on
-                experience in problem-solving, teamwork, and professional communication. Passionate about contributing
-                to dynamic projects, learning new tools and techniques, and collaborating with others to deliver
-                impactful results.
-            </p>
-        </div>
-
-        <div class="section">
+        <hr> <div class="section">
             <h3>Education</h3>
             <p class="small-text">
-                Bachelor of Engineering in Computer Engineering, Chulalongkorn University<br>
-                <em>Expected Graduation: 2027</em>
-            </p>
-            <p class="small-text">
-                <strong>Relevant Coursework:</strong> Google AI Essentials, Inclusive Teamwork, Data Structures,
-                Algorithms, Database Systems, Object-Oriented Programming, Verilog and FPGA.
+                <strong>Bachelor of Engineering in Computer Engineering, Chulalongkorn University</strong><br>
+                <em>Expected May 2027 (GPA 3.51)</em>
             </p>
         </div>
+
+        <div class="section">
+            <h3>Relevant Coursework</h3>
+            <p class="small-text">
+                Software Engineering, Data Structures, Algorithms, Database Systems, Object-Oriented Programming, Operating System, Machine Learning, Computer Network
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3>Skills</h3>
+            <ul class="skills-list">
+                <li><strong>Languages:</strong> JavaScript, TypeScript, Python, Java, C++</li>
+                <li><strong>Stack:</strong> Node.js, Express, React, Tailwind CSS, MongoDB, PostgreSQL, Jest</li>
+                <li><strong>Tools:</strong> AWS(Basic), Docker (Basic), Git, GitHub Actions</li>
+            </ul>
+        </div>
+
 
         <div class="section">
             <h3>Projects</h3>
 
             <div class="project-block">
-                <p><strong>SpyWord Webgame</strong></p>
+                <p class="project-title">
+                    Krapong-Go | <a href="https://github.com/miramsalp/Krapong-Go" target="_blank">github.com/miramsalp/Krapong-Go</a>
+                </p>
+                <p class="small-text project-desc">
+                    A full-stack MERN application designed to improve local transit efficiency by creating 
+                    a real-time link between passengers and drivers (side-project)
+                </p>
                 <ul>
-                    <li>Collaborated in a group project to design a web-based game where players detect a spy receiving
-                        a different word.</li>
-                    <li>Developed frontend and backend using HTML, CSS, and JavaScript.</li>
-                    <li>Used MongoDB for word and user data storage, and deployed on AWS for scalability.</li>
+                    <li>Developed a responsive user interface for mobile with React, including authentication pages and an interactive map UI.</li>
+                    <li>Developed the backend using Node.js, Socket.IO, and Redis for scalable, low-latency communication and persistent session management.</li>
+                    <li>Established a CI/CD pipeline with GitHub Actions and Jest to automate testing and deployment</li>
                 </ul>
             </div>
-
-            <hr class="project-divider">
 
             <div class="project-block">
-                <p><strong>Salp’s Journey – Static Blog Website</strong></p>
+                <p class="project-title">
+                    WebChat | <a href="https://github.com/violin11909/webChat" target="_blank">github.com/violin11909/webChat</a>
+                </p>
+                <p class="small-text project-desc">
+                    A full-stack webchat application (group-project)
+                </p>
                 <ul>
-                    <li>Created a responsive personal blog using HTML, CSS (Bootstrap), and vanilla JavaScript.</li>
-                    <li>Implemented post loading from JSON, pagination, and dark mode toggle.</li>
-                    <li>Inspired by the layout of <em>fuwari</em>; deployed on GitHub Pages.</li>
+                    <li>full-stack development using Node.js, Socket.IO and Firebase for media uploads.</li>
+                    <li>Engineered and deployed a scalable backend on AWS Elastic Beanstalk with a Load Balancer to handle concurrent user traffic effectively.</li>
+                    <li>Deployed the frontend application using AWS Amplify</li>
                 </ul>
             </div>
-
-            <hr class="project-divider">
 
             <div class="project-block">
-                <p><strong>VGA Image Switcher (FPGA Project)</strong></p>
+                <p class="project-title">
+                    Agaya | <a href="https://github.com/Pachara2103/Agaya" target="_blank">github.com/Pachara2103/Agaya</a>
+                </p>
+                <p class="small-text project-desc">
+                    A full-stack middleman ecommerce handle between vendors and customers (group-project)
+                </p>
                 <ul>
-                    <li>Developed using Verilog on Basys3 FPGA board to display images via VGA output.</li>
-                    <li>Implemented image switching using input switches (SW0 and SW1).</li>
-                    <li>Used Block RAM to store RGB image data and control frame rendering.</li>
+                    <li>full-stack development and coordinated project sprint for the team</li>
+                    <li>Developed and integrated a secure payment processing flow using the Stripe API</li>
+                    <li>Implemented a cloud-based media solution with Cloudinary for efficient product image storage and delivery</li>
                 </ul>
             </div>
         </div>
 
-
-
-        <div class="section">
-            <h3>Computer Engineering Skills</h3>
-            <ul>
-                <li><strong>Programming:</strong> Python, C++, Java, JavaScript</li>
-                <li><strong>Tools:</strong> Git (Basic), VS Code, Eclipse</li>
-                <li><strong>Systems:</strong> FPGA, Arduino, Verilog</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Language Skills</h3>
-            <ul>
-                <li>Speaks and writes conversational English</li>
-                <li>Basic Japanese (JLPT N4) and basic knowledge of Japanese characters</li>
-            </ul>
-        </div>
     </div>
 
 </body>

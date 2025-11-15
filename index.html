@@ -19,28 +19,27 @@
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><span class="fs-4 nani" style="font-weight: bold;">Miramsalp</span></a>
+          <a class="navbar-brand" href="#"><span class="fs-4 nani">Miramsalp</span></a>
           <button class="navbar-toggler make-nav-btn-color" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mmm-auto mb-2 mb-lg-0 gap-3">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
               <li class="nav-item ulah">
                 <a href="#" class="nav-link" aria-current="page"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="currentColor" class="bi bi-house mb-1" viewBox="0 0 16 16">
+                    height="16" fill="currentColor" class="bi bi-house align-text-bottom" viewBox="0 0 16 16">
                     <path
                       d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
-                  </svg>Home</a>
+                  </svg> Home</a>
               </li>
               <li class="nav-item ulah"><a href="#project" class="nav-link">Project</a></li>
-              <li class="nav-item ulah"><a href="./resume.html" target = "_blank" class="nav-link">Resume</a></li>
+              <li class="nav-item ulah"><a href="./resume.html" target="_blank" class="nav-link">Resume</a></li>
               <li class="nav-item ulah">
                 <a href="https://miramsalp.github.io/salp-journey/" class="nav-link" target="_blank">Blog</a>
               </li>
               <li class="nav-item ulah"><a href="#about" class="nav-link">About</a></li>
-              <!-- <li class="nav-item"><a href="#" class="nav-link">About</a></li> -->
             </ul>
           </div>
         </div>
@@ -50,24 +49,18 @@
   </section>
 
   <section id="heroes" class="gradient-background">
-    <div class="container col-xxl-8 px-4 py-5" style="height: 60vh;">
+    <div class="container col-xxl-8 px-4 py-5" style="min-height: 60vh;">
       <div class="row flex-lg align-items-center g-5 py-5">
-        <!-- move-to-center use for responsive when go on small screen -->
-        <div class="col-lg-6 col-sm-12 move-to-center">
+        <div class="col-lg-6 col-sm-12 text-center text-lg-start">
           <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi, I am Thanapat <br /> Aupprathumwipanon</h1>
           <p class="lead">Computer Engineering Student</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-            <ul class="uul">
-              <li class="lli">
-                <a href="https://github.com/miramsalp" target="_blank"><i class="fab fa-github icon"></i></a>
-              </li>
-              <li class="lli">
-                <a href="https://www.linkedin.com/in/thanapat-aupprathumwipanon-a79850339/" target="_blank"><i class="fab fa-linkedin-in icon"></i></a>
-              </li>
-              <li class="lli">
-                <a href="mailto:petchthanapat160@gmail.com"><i class="fab fa-google-plus-g icon"></i></a>
-              </li>
-            </ul>
+          <div class="d-grid gap-2 d-md-flex justify-content-center justify-content-lg-start">
+            <div class="hero-socials d-flex gap-4">
+              <a href="https://github.com/miramsalp" target="_blank" class="social-icon" aria-label="GitHub"><i
+                  class="fab fa-github"></i></a>
+              <a href="mailto:petchthanapat160@gmail.com" class="social-icon" aria-label="Email"><i
+                  class="fas fa-envelope"></i></a>
+            </div>
           </div>
         </div>
       </div>
@@ -75,46 +68,91 @@
 
   <section id="about">
     <div class="container">
-      <div class="p-5 text-center rounded-3"> <img src="./assets/myprofilepic.jpg" class="profilepic"
-          style="height: 100px; width: 100px;" />
+      <div class="p-5 text-center rounded-3">
+        <img src="./assets/myprofilepic.jpg" class="profilepic" alt="A profile picture of Thanapat Aupprathumwipanon" />
         <h1 class="text-light">About me</h1>
         <p class="col-lg-8 mx-auto fs-5 text-light">
           I'm currently a Computer Engineering student. I enjoy playing basketball, although I haven't played in about a
           year. I also love eating KFC.
         </p>
-
+      </div>
     </div>
   </section>
 
   <section id="project">
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg align-items-center g-5 py-5">
-        <div class="col-lg-6 move-to-center"><a href="https://github.com/miramsalp/vga-image-switcher" target="_blank"><img src="./assets/demo.gif"
-            class="d-block mx-lg-auto img-fluid rounded-4" alt="demo of vga image switcher" width="300" height="200"
-            loading="lazy"></a> </div>
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">VGA Image Switcher</h1>
-          <p class="lead">A hardware project built on the Basys3 FPGA board that displays 3 different images on a VGA
-            monitor. Users can switch between images in real time using SW0 and SW1. Image data is stored in memory and
-            rendered frame by frame via Verilog.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
-              class="btn btn-primary btn-lg px-4 me-md-2"><a href="https://github.com/miramsalp/vga-image-switcher" target="_blank" class = "nav-link">Link to repo</a></button></div>
+    <div class="container py-5">
+      <h1 class="text-center mb-5">Projects</h1>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <a href="https://github.com/miramsalp/vga-image-switcher" target="_blank"><img src="./assets/demo.gif"
+                class="img-fluid rounded-4" alt="Animated demo of the VGA Image Switcher project"></a>
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">VGA Image Switcher</h5>
+              <p class="card-text">A hardware project built on the Basys3 FPGA board that displays 3 different images on a
+                VGA monitor.</p>
+              <a href="https://github.com/miramsalp/vga-image-switcher" target="_blank" class="btn btn-theme">Link to
+                repo</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="container col-xxl-8 px-4 py-5">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-        <div class="col-lg-6 justify-content-center"><a href="https://miramsalp.github.io/salp-journey/" target="_blank"><img src="./assets/demoblog.PNG"
-            class="d-block mx-lg-auto img-fluid rounded-4" alt="demo of vga image switcher" width="700" height="500"
-            loading="lazy"></a> </div>
-        <div class="col-lg-6">
-          <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Salp's Journey</h1>
-          <p class="lead">A personal blog built using HTML, CSS (Bootstrap), and vanilla JavaScript.
-            Inspired by the layout and aesthetic of fuwari, the blog focuses on clean visuals, responsive design, and
-            simplicity.
-            It serves as a space to document my learning journey.</p>
-          <div class="d-grid gap-2 d-md-flex justify-content-md-start"> <button type="button"
-              class="btn btn-primary btn-lg px-4 me-md-2"><a href="https://github.com/miramsalp/salp-journey" target="_blank" class = "nav-link">Link to repo</a></button></div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <a href="https://miramsalp.github.io/salp-journey/" target="_blank"><img src="./assets/demoblog.PNG"
+                class="img-fluid rounded-4" alt="Screenshot of the 'Salp's Journey' blog homepage"></a>
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">Salp's Journey</h5>
+              <p class="card-text">A personal blog built using HTML, CSS (Bootstrap), and vanilla JavaScript.</p>
+              <a href="https://github.com/miramsalp/salp-journey" target="_blank" class="btn btn-theme">Link to repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <img src="./assets/demopoke.png" class="img-fluid rounded-4"
+              alt="Screenshot of the Pokemon Weakness Finder app">
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">Pokemon Weakness Finder</h5>
+              <p class="card-text">I created this because while playing Pokémon, I couldn't find a site to quickly
+                check weaknesses without lots of clicking and scrolling. This tool solves that.</p>
+              <a href="https://github.com/miramsalp/poke-weakness-finder" target="_blank" class="btn btn-theme">Link to repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <img src="./assets/demokrapong.png" class="img-fluid rounded-4"
+              alt="Screenshot of the Krapong-Go app">
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">Krapong-Go</h5>
+              <p class="card-text">Inspired by transit issues in my hometown of Thonburi,
+                this app uses real-time demand signals to connect drivers with waiting passengers, reducing unprofitable
+                'empty runs' and improving service reliability</p>
+              <a href="https://github.com/miramsalp/Krapong-Go" target="_blank" class="btn btn-theme">Link to repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <img src="./assets/demoaga.png" class="img-fluid rounded-4" alt="Screenshot of the Agaya e-commerce site">
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">Agaya</h5>
+              <p class="card-text">A group project to create an e-commerce platform that acts as a middleman, handling
+                logistics and payments between vendors and customers.</p>
+              <a href="https://github.com/Pachara2103/Agaya" target="_blank" class="btn btn-theme">Link to repo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <img src="./assets/demowebchat.png" class="img-fluid rounded-4" alt="Screenshot of the Otto Webchat app">
+            <div class="project-card-body">
+              <h5 class="card-title mt-3">Otto Webchat</h5>
+              <p class="card-text">A group webchat project where I learned to implement a load balancer on AWS
+                Elastic Beanstalk and configure a custom domain.</p>
+              <a href="https://github.com/violin11909/webChat" target="_blank" class="btn btn-theme">Link to repo</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -123,14 +161,14 @@
   <section id="footer">
     <div class="container">
       <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center"> <a href="/"
-            class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> <svg
-              class="bi" width="30" height="24" aria-hidden="true">
-              <use xlink:href="#bootstrap"></use>
-            </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">© Thanapat Aupprathumwipanon</span> </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="mb-3 mb-md-0 text-body-secondary">© Thanapat Aupprathumwipanon</span>
+        </div>
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/miramsalp" aria-label="Github"><img src="./assets/github.svg" height="25px"/></a></li>
-          <li class="ms-3"><a class="text-body-secondary" href="mailto:petchthanapat160@gmail.com" aria-label="Gmail"><img src="./assets/google.svg" height="25px"/></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="https://github.com/miramsalp" aria-label="Github"><img
+                src="./assets/github.svg" height="25px" alt="Github icon" /></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="mailto:petchthanapat160@gmail.com"
+              aria-label="Gmail"><img src="./assets/google.svg" height="25px" alt="Google icon" /></a></li>
         </ul>
       </footer>
     </div>
