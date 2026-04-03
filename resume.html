@@ -58,31 +58,78 @@
             color: #333;
             line-height: 1.5;
         }
-        
+
         .skills-list li {
             margin-bottom: 8px;
         }
 
-        .project-block {
-            /* Added more space between projects */
-            margin-bottom: 30px; 
+        .exp-block {
+            margin-bottom: 20px;
         }
-        
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .exp-title {
+            font-weight: bold;
+            font-size: 1.05em;
+        }
+
+        .exp-date {
+            font-size: 0.9em;
+            color: #555;
+            white-space: nowrap;
+        }
+
+        .exp-subtitle {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .exp-block ul {
+            list-style: none;
+            padding-left: 1em;
+        }
+
+        .exp-block ul li {
+            margin-bottom: 8px;
+            position: relative;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .exp-block ul li::before {
+            content: "– ";
+            position: absolute;
+            left: -1em;
+            color: #555;
+        }
+
+        .project-block {
+            margin-bottom: 30px;
+        }
+
         .project-block p {
             margin: 5px 0;
         }
-        
+
         .project-title {
             font-weight: bold;
             font-size: 1.05em;
         }
-        
+
         .project-title a {
             font-size: 0.9em;
             font-weight: normal;
             font-family: 'Courier New', Courier, monospace;
         }
-        
+
         .project-desc {
             font-style: italic;
             margin-bottom: 10px !important;
@@ -96,6 +143,8 @@
         .project-block ul li {
             margin-bottom: 8px;
             position: relative;
+            font-size: 0.95em;
+            line-height: 1.5;
         }
 
         .project-block ul li::before {
@@ -104,16 +153,15 @@
             left: -1em;
             color: #555;
         }
-        
+
         a {
             color: #0077b5;
             text-decoration: none;
         }
-        
+
         a:hover {
             text-decoration: underline;
         }
-
     </style>
 </head>
 
@@ -124,80 +172,111 @@
         <div class="centered">
             <h2>Thanapat Aupprathumwipanon</h2>
             <p>68/70 Ekkachai 10/1 Road, Bang Khun Thian, Chom Thong, Bangkok 10150</p>
-            <p>Tel: +66 99-009-0809 | Email: thanapat.aupp@outlook.com</p>
-            <p>Github: <a href="https://github.com/miramsalp" target="_blank">github.com/miramsalp</a></p>
+            <p>Tel: +66 99-009-0809 | Email: thanapat.aupp@gmail.com</p>
+            <p>
+                Github: <a href="https://github.com/miramsalp" target="_blank">github.com/miramsalp</a>
+                &nbsp;|&nbsp;
+                Website: <a href="https://personal-website-miramsalp.vercel.app" target="_blank">personal-website-miramsalp.vercel.app</a>
+            </p>
         </div>
 
-        <hr> <div class="section">
+        <hr>
+
+        <div class="section">
             <h3>Education</h3>
             <p class="small-text">
                 <strong>Bachelor of Engineering in Computer Engineering, Chulalongkorn University</strong><br>
-                <em>Expected May 2027 (GPA 3.51)</em>
+                <em>Expected May 2027 (GPA 3.52)</em>
             </p>
         </div>
 
         <div class="section">
             <h3>Relevant Coursework</h3>
             <p class="small-text">
-                Software Engineering, Data Structures, Algorithms, Database Systems, Object-Oriented Programming, Operating System, Machine Learning, Computer Network
+                Software Engineering, Data Structures, Algorithms, Database Systems, Object-Oriented Programming,
+                Operating System, Machine Learning, Computer Network
             </p>
         </div>
-        
-        <div class="section">
-            <h3>Skills</h3>
-            <ul class="skills-list">
-                <li><strong>Languages:</strong> JavaScript, TypeScript, Python, Java, C++</li>
-                <li><strong>Stack:</strong> Node.js, Express, React, Tailwind CSS, MongoDB, PostgreSQL, Jest</li>
-                <li><strong>Tools:</strong> AWS(Basic), Docker (Basic), Git, GitHub Actions</li>
-            </ul>
-        </div>
 
+        <div class="section">
+            <h3>Work Experience</h3>
+            <div class="exp-block">
+                <div class="exp-header">
+                    <span class="exp-title">Skooldio Tech — Software Engineer (Part Time)</span>
+                    <span class="exp-date">Feb 2026 – May 2026</span>
+                </div>
+                <ul>
+                    <li>Contributed to the development of "Wise Mentoring Ship", a cross-university mentorship platform,
+                        utilizing React, NestJS, and TypeScript.</li>
+                    <li>Applied clean architecture principles by implementing DTOs, Entities, and Use Cases, and
+                        integrated Swagger for API documentation.</li>
+                    <li>Configured the global UI theme and built reusable base components, accelerating the development
+                        speed for the engineering team.</li>
+                </ul>
+            </div>
+        </div>
 
         <div class="section">
             <h3>Projects</h3>
 
             <div class="project-block">
                 <p class="project-title">
-                    Krapong-Go | <a href="https://github.com/miramsalp/Krapong-Go" target="_blank">github.com/miramsalp/Krapong-Go</a>
+                    Krapong-Go | <a href="https://github.com/miramsalp/Krapong-Go"
+                        target="_blank">github.com/miramsalp/Krapong-Go</a>
                 </p>
                 <p class="small-text project-desc">
-                    A full-stack MERN application designed to improve local transit efficiency by creating 
-                    a real-time link between passengers and drivers (side-project)
+                    A full-stack MERN application designed to improve local transit efficiency by creating a real-time
+                    link between passengers and drivers (side-project)
                 </p>
                 <ul>
-                    <li>Developed a responsive user interface for mobile with React, including authentication pages and an interactive map UI.</li>
-                    <li>Developed the backend using Node.js, Socket.IO, and Redis for scalable, low-latency communication and persistent session management.</li>
-                    <li>Established a CI/CD pipeline with GitHub Actions and Jest to automate testing and deployment</li>
+                    <li>Developed a responsive user interface for mobile with React, including authentication pages and
+                        an interactive map UI.</li>
+                    <li>Developed the backend using Node.js, Socket.IO, and Redis for scalable, low-latency
+                        communication and persistent session management.</li>
+                    <li>Established a CI/CD pipeline with GitHub Actions and Jest to automate testing and deployment.</li>
                 </ul>
             </div>
 
             <div class="project-block">
                 <p class="project-title">
-                    WebChat | <a href="https://github.com/violin11909/webChat" target="_blank">github.com/violin11909/webChat</a>
+                    Agaya | <a href="https://github.com/Pachara2103/Agaya"
+                        target="_blank">github.com/Pachara2103/Agaya</a>
                 </p>
                 <p class="small-text project-desc">
-                    A full-stack webchat application (group-project)
+                    A full-stack middleman e-commerce platform connecting vendors and customers (group-project)
                 </p>
                 <ul>
-                    <li>full-stack development using Node.js, Socket.IO and Firebase for media uploads.</li>
-                    <li>Engineered and deployed a scalable backend on AWS Elastic Beanstalk with a Load Balancer to handle concurrent user traffic effectively.</li>
-                    <li>Deployed the frontend application using AWS Amplify</li>
+                    <li>Acted as Team Lead, coordinating Agile sprints, managing full-stack development tasks, and
+                        overseeing the end-to-end delivery of the platform.</li>
+                    <li>Integrated secure payment processing using the Stripe API and implemented Cloudinary for
+                        efficient product image storage and delivery.</li>
                 </ul>
             </div>
 
             <div class="project-block">
                 <p class="project-title">
-                    Agaya | <a href="https://github.com/Pachara2103/Agaya" target="_blank">github.com/Pachara2103/Agaya</a>
+                    Stock Watcher Dashboard | <a href="https://github.com/miramsalp/stock-watcher"
+                        target="_blank">github.com/miramsalp/stock-watcher</a>
                 </p>
                 <p class="small-text project-desc">
-                    A full-stack middleman ecommerce handle between vendors and customers (group-project)
+                    A real-time notification tool for stock market tracking
                 </p>
                 <ul>
-                    <li>full-stack development and coordinated project sprint for the team</li>
-                    <li>Developed and integrated a secure payment processing flow using the Stripe API</li>
-                    <li>Implemented a cloud-based media solution with Cloudinary for efficient product image storage and delivery</li>
+                    <li>Built an automated tracking dashboard that pushes real-time stock alerts to user groups via the
+                        LINE Messaging API, eliminating the need for continuous manual market monitoring and saving
+                        users significant time.</li>
+                    <li>Implemented LINE Login to provide a secure authentication experience for users.</li>
                 </ul>
             </div>
+
+        </div>
+
+        <div class="section">
+            <h3>Skills</h3>
+            <p class="small-text">
+                TypeScript, JavaScript, Python, C++, React, Node.js, NestJS, PostgreSQL, AWS, Docker, GitHub Actions,
+                Swagger
+            </p>
         </div>
 
     </div>
