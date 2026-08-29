@@ -25,11 +25,27 @@
             text-align: center;
         }
 
+        .centered p {
+            margin: 5px 0;
+        }
+
+        .role-line {
+            font-weight: bold;
+            color: #555;
+            letter-spacing: 0.02em;
+        }
+
         hr {
             border: 0;
             height: 1px;
             background: #000;
             margin: 20px 0;
+        }
+
+        .summary {
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
         .section {
@@ -57,10 +73,6 @@
             font-size: 0.95em;
             color: #333;
             line-height: 1.5;
-        }
-
-        .skills-list li {
-            margin-bottom: 8px;
         }
 
         .exp-block {
@@ -105,7 +117,7 @@
         }
 
         .exp-block ul li::before {
-            content: "– ";
+            content: "\2013 ";
             position: absolute;
             left: -1em;
             color: #555;
@@ -148,10 +160,22 @@
         }
 
         .project-block ul li::before {
-            content: "– ";
+            content: "\2013 ";
             position: absolute;
             left: -1em;
             color: #555;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 8px 16px;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .skill-label {
+            font-weight: bold;
         }
 
         a {
@@ -162,6 +186,25 @@
         a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            .resume-box {
+                padding: 24px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 2px 0;
+            }
+
+            .skill-label {
+                margin-top: 8px;
+            }
+        }
     </style>
 </head>
 
@@ -171,16 +214,23 @@
 
         <div class="centered">
             <h2>Thanapat Aupprathumwipanon</h2>
-            <p>68/70 Ekkachai 10/1 Road, Bang Khun Thian, Chom Thong, Bangkok 10150</p>
-            <p>Tel: +66 99-009-0809 | Email: thanapat.aupp@gmail.com</p>
+            <p class="role-line">Software Engineer &middot; Full-Stack Developer</p>
+            <p>Bangkok, Thailand | Tel: +66 99-009-0809 | Email: thanapat.aupp@gmail.com</p>
             <p>
                 Github: <a href="https://github.com/miramsalp" target="_blank">github.com/miramsalp</a>
                 &nbsp;|&nbsp;
-                Website: <a href="https://personal-website-miramsalp.vercel.app" target="_blank">personal-website-miramsalp.vercel.app</a>
+                Website: <a href="https://personal-website-miramsalp.vercel.app"
+                    target="_blank">personal-website-miramsalp.vercel.app</a>
             </p>
         </div>
 
         <hr>
+
+        <p class="summary">
+            Computer Engineering student at Chulalongkorn University building production full-stack systems in React,
+            NestJS and TypeScript. Comfortable across the stack &mdash; from clean-architecture APIs and CI/CD pipelines
+            to data migration, third-party integrations and deployment.
+        </p>
 
         <div class="section">
             <h3>Education</h3>
@@ -191,27 +241,42 @@
         </div>
 
         <div class="section">
-            <h3>Relevant Coursework</h3>
-            <p class="small-text">
-                Software Engineering, Data Structures, Algorithms, Database Systems, Object-Oriented Programming,
-                Operating System, Machine Learning, Computer Network
-            </p>
-        </div>
+            <h3>Experience</h3>
 
-        <div class="section">
-            <h3>Work Experience</h3>
             <div class="exp-block">
                 <div class="exp-header">
-                    <span class="exp-title">Skooldio Tech — Software Engineer (Part Time)</span>
-                    <span class="exp-date">Feb 2026 – May 2026</span>
+                    <span class="exp-title">Software Engineer Intern &mdash; Skooldio</span>
+                    <span class="exp-date">Jun &ndash; Jul 2026</span>
                 </div>
+                <p class="exp-subtitle">
+                    Wise Mentoring Ship &mdash; cross-university mentorship platform &middot; React, NestJS, TypeScript
+                </p>
                 <ul>
-                    <li>Contributed to the development of "Wise Mentoring Ship", a cross-university mentorship platform,
-                        utilizing React, NestJS, and TypeScript.</li>
-                    <li>Applied clean architecture principles by implementing DTOs, Entities, and Use Cases, and
-                        integrated Swagger for API documentation.</li>
-                    <li>Configured the global UI theme and built reusable base components, accelerating the development
-                        speed for the engineering team.</li>
+                    <li>Delivered end-to-end features across the platform: registration flow, mentee-request and
+                        mentor-handling logic, dashboard, homepage, paginated explore pages, and the admin back-office
+                        flow.</li>
+                    <li>Authored a data-migration plan and scripts to move existing records safely into the new schema.
+                    </li>
+                    <li>Built base design tokens and reusable components, and applied clean-architecture / clean-code
+                        practices (DTOs, Entities, Use Cases) with Swagger API docs.</li>
+                    <li>Set up the CI/CD pipeline and integrated LINE (Official Account, Flex messages, Developer APIs),
+                        using GCP Cloud Tasks for scheduled and async notifications; co-developed features alongside the
+                        engineering manager.</li>
+                </ul>
+            </div>
+
+            <div class="exp-block">
+                <div class="exp-header">
+                    <span class="exp-title">Frontend Developer &mdash; ISD, Chulalongkorn University</span>
+                    <span class="exp-date">2026</span>
+                </div>
+                <p class="exp-subtitle">
+                    Student-organization registration platforms &mdash; First Date &amp; RubpuenKaomai 2026 &middot;
+                    React
+                </p>
+                <ul>
+                    <li>Built the registration flow, landing page, and edit-profile UI, and handled API integration for
+                        large freshman-welcome events.</li>
                 </ul>
             </div>
         </div>
@@ -221,35 +286,18 @@
 
             <div class="project-block">
                 <p class="project-title">
-                    Krapong-Go | <a href="https://github.com/miramsalp/Krapong-Go"
-                        target="_blank">github.com/miramsalp/Krapong-Go</a>
-                </p>
-                <p class="small-text project-desc">
-                    A full-stack MERN application designed to improve local transit efficiency by creating a real-time
-                    link between passengers and drivers (side-project)
-                </p>
-                <ul>
-                    <li>Developed a responsive user interface for mobile with React, including authentication pages and
-                        an interactive map UI.</li>
-                    <li>Developed the backend using Node.js, Socket.IO, and Redis for scalable, low-latency
-                        communication and persistent session management.</li>
-                    <li>Established a CI/CD pipeline with GitHub Actions and Jest to automate testing and deployment.</li>
-                </ul>
-            </div>
-
-            <div class="project-block">
-                <p class="project-title">
                     Agaya | <a href="https://github.com/Pachara2103/Agaya"
                         target="_blank">github.com/Pachara2103/Agaya</a>
                 </p>
                 <p class="small-text project-desc">
-                    A full-stack middleman e-commerce platform connecting vendors and customers (group-project)
+                    A full-stack middleman e-commerce platform connecting vendors and customers end to end.
+                    &middot; Full-stack &middot; Stripe &middot; Cloudinary
                 </p>
                 <ul>
-                    <li>Acted as Team Lead, coordinating Agile sprints, managing full-stack development tasks, and
-                        overseeing the end-to-end delivery of the platform.</li>
-                    <li>Integrated secure payment processing using the Stripe API and implemented Cloudinary for
-                        efficient product image storage and delivery.</li>
+                    <li>Acted as Team Lead &mdash; coordinated Agile sprints, managed full-stack development tasks, and
+                        oversaw end-to-end delivery of the platform.</li>
+                    <li>Integrated secure payment processing with the Stripe API and implemented Cloudinary for
+                        efficient product-image storage and delivery.</li>
                 </ul>
             </div>
 
@@ -259,12 +307,12 @@
                         target="_blank">github.com/miramsalp/stock-watcher</a>
                 </p>
                 <p class="small-text project-desc">
-                    A real-time notification tool for stock market tracking
+                    A real-time stock-alert tool that automates market tracking with push notifications to user groups.
+                    &middot; LINE Messaging API &middot; LINE Login
                 </p>
                 <ul>
                     <li>Built an automated tracking dashboard that pushes real-time stock alerts to user groups via the
-                        LINE Messaging API, eliminating the need for continuous manual market monitoring and saving
-                        users significant time.</li>
+                        LINE Messaging API, removing the need for continuous manual market monitoring.</li>
                     <li>Implemented LINE Login to provide a secure authentication experience for users.</li>
                 </ul>
             </div>
@@ -273,10 +321,18 @@
 
         <div class="section">
             <h3>Skills</h3>
-            <p class="small-text">
-                TypeScript, JavaScript, Python, C++, React, Node.js, NestJS, PostgreSQL, AWS, Docker, GitHub Actions,
-                Swagger
-            </p>
+            <div class="skills-grid">
+                <span class="skill-label">Languages</span>
+                <span>TypeScript, JavaScript, Python, C++</span>
+                <span class="skill-label">Frontend</span>
+                <span>React, Tailwind CSS</span>
+                <span class="skill-label">Backend</span>
+                <span>Node.js, NestJS, FastAPI, Socket.IO, Redis, Swagger</span>
+                <span class="skill-label">Data / DevOps</span>
+                <span>PostgreSQL, AWS, GCP, Docker, GitHub Actions (CI/CD)</span>
+                <span class="skill-label">Integrations</span>
+                <span>LINE Messaging / Flex / OA, Stripe, Cloudinary</span>
+            </div>
         </div>
 
     </div>
