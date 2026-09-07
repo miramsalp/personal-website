@@ -1,9 +1,10 @@
 /**
- * Renders resume.html to a single-page, text-selectable PDF using the copy of
- * Chrome already installed on this machine. No dependencies, no print dialog,
+ * Renders an HTML file to a text-selectable PDF using the copy of Chrome
+ * already installed on this machine. No dependencies, no print dialog,
  * no browser headers/footers.
  *
- *   node export-pdf.mjs
+ *   node export-pdf.mjs                              -> resume.html
+ *   node export-pdf.mjs portfolio.html portfolio.pdf -> anything else
  */
 import { spawn } from 'node:child_process';
 import { writeFileSync, existsSync } from 'node:fs';
@@ -11,8 +12,11 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const SOURCE = join(here, 'resume.html');
-const OUTPUT = join(here, 'Thanapat_Aupprathumwipanon_Resume.pdf');
+const [sourceArg, outputArg] = process.argv.slice(2);
+const SOURCE = join(here, sourceArg ?? 'resume.html');
+const OUTPUT = join(here, outputArg ?? 'Thanapat_Aupprathumwipanon_Resume.pdf');
+// Only the resume is supposed to be one page; a portfolio is meant to run long.
+const EXPECT_SINGLE_PAGE = !sourceArg;
 
 const CHROME_CANDIDATES = [
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
@@ -108,7 +112,7 @@ writeFileSync(OUTPUT, pdf);
 
 const pages = Number(pdf.toString('latin1').match(/\/Count\s+(\d+)/)?.[1] ?? 1);
 console.log(`Wrote ${OUTPUT} (${pages} page${pages === 1 ? '' : 's'})`);
-if (pages > 1) {
+if (pages > 1 && EXPECT_SINGLE_PAGE) {
   console.log('Heads up: the resume no longer fits on one page. Trim a bullet, or');
   console.log('lower the `font-size` in the `@media print` block of resume.html.');
 }
