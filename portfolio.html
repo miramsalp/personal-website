@@ -6,14 +6,11 @@
     <title>Portfolio - Thanapat Aupprathumwipanon</title>
     <style>
         :root {
-            --ink: #14161a;
-            --body: #3a4149;
-            --muted: #737d88;
-            --line: #dde2e8;
-            --line-soft: #eef1f5;
-            --navy: #123a5e;
-            --accent: #b85227;
-            --wash: #f6f8fa;
+            --ink: #111315;
+            --body: #4b5157;
+            --muted: #8c9197;
+            --rule: #e1e4e7;
+            --faint: #f5f6f8;
         }
 
         * {
@@ -23,19 +20,18 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', -apple-system, sans-serif;
+            font-size: 10pt;
+            line-height: 1.55;
             color: var(--body);
-            background: #8a9099;
-            font-size: 9.9pt;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            background: #9aa0a6;
         }
 
         .page {
             position: relative;
             width: 210mm;
-            min-height: 297mm;
+            height: 297mm;
             margin: 8mm auto;
-            padding: 15mm 16mm 14mm;
+            padding: 20mm 18mm 16mm;
             background: #fff;
             overflow: hidden;
         }
@@ -46,305 +42,218 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 0;
         }
 
-        .cover-top {
-            padding: 30mm 16mm 0;
-        }
-
-        .cover-eyebrow {
-            font-size: 8.6pt;
-            letter-spacing: 0.22em;
+        .eyebrow {
+            font-size: 8.4pt;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            color: var(--accent);
-            font-weight: 700;
-            margin: 0 0 10mm;
-        }
-
-        .cover-name {
-            font-size: 40pt;
-            line-height: 1.04;
-            font-weight: 700;
-            color: var(--ink);
-            letter-spacing: -0.02em;
+            color: var(--muted);
             margin: 0;
         }
 
-        .cover-name span {
-            display: block;
-            color: var(--navy);
-        }
-
-        .cover-role {
-            margin: 7mm 0 0;
-            font-size: 13pt;
+        .cover h1 {
+            margin: 14mm 0 0;
+            font-size: 30pt;
             font-weight: 600;
-            color: var(--navy);
+            line-height: 1.12;
+            letter-spacing: -0.015em;
+            color: var(--ink);
         }
 
-        .cover-rule {
-            width: 28mm;
-            height: 3px;
-            background: var(--accent);
-            margin: 8mm 0;
-        }
-
-        .cover-intro {
-            max-width: 128mm;
-            font-size: 11pt;
-            line-height: 1.68;
+        .cover .role {
+            margin: 4mm 0 0;
+            font-size: 12pt;
             color: var(--body);
         }
 
-        .cover-intro strong {
-            color: var(--ink);
+        .cover .intro {
+            margin: 12mm 0 0;
+            max-width: 132mm;
+            font-size: 11pt;
+            line-height: 1.7;
+            color: var(--body);
         }
 
-        .cover-bottom {
-            padding: 0 16mm 20mm;
-        }
-
-        .cover-index {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3mm 12mm;
-            padding: 7mm 0;
-            border-top: 1px solid var(--line);
-            border-bottom: 1px solid var(--line);
-            margin-bottom: 8mm;
-        }
-
-        .cover-index div {
-            display: flex;
-            gap: 5mm;
-            font-size: 9.6pt;
-        }
-
-        .cover-index b {
-            color: var(--accent);
-            font-variant-numeric: tabular-nums;
-            font-weight: 700;
-        }
-
-        .cover-index span {
+        .cover .intro b {
             color: var(--ink);
             font-weight: 600;
         }
 
-        .cover-contact {
+        .index {
+            border-top: 1px solid var(--rule);
+            padding-top: 6mm;
+            margin-bottom: 9mm;
+        }
+
+        .index li {
             display: flex;
-            flex-wrap: wrap;
-            gap: 3mm 7mm;
+            gap: 6mm;
+            padding: 1.4mm 0;
+            font-size: 10pt;
+            border-bottom: 1px solid var(--faint);
+        }
+
+        .index ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .index i {
+            color: var(--muted);
+            font-style: normal;
+            font-variant-numeric: tabular-nums;
+            width: 8mm;
+        }
+
+        .index b {
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .contact {
+            font-size: 9.4pt;
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+        .contact a {
+            color: var(--body);
+            text-decoration: none;
+        }
+
+        /* ---------- project furniture ---------- */
+
+        .head {
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 4mm;
+            margin-bottom: 5mm;
+        }
+
+        .head .n {
+            font-size: 9pt;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.12em;
+        }
+
+        .head h2 {
+            margin: 1.5mm 0 0;
+            font-size: 17pt;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            line-height: 1.2;
+        }
+
+        .fullname {
+            margin: 1.6mm 0 0;
             font-size: 9.4pt;
             color: var(--muted);
         }
 
-        .cover-contact a {
-            color: var(--navy);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* ---------- project page furniture ---------- */
-
-        .p-head {
-            display: flex;
-            align-items: flex-start;
-            gap: 6mm;
-            padding-bottom: 4mm;
-            border-bottom: 2px solid var(--ink);
-            margin-bottom: 6mm;
-        }
-
-        .p-num {
-            font-size: 22pt;
-            font-weight: 700;
-            line-height: 1;
-            color: var(--accent);
-            font-variant-numeric: tabular-nums;
-            padding-top: 1mm;
-        }
-
-        .p-headtext {
-            flex: 1;
-        }
-
-        .p-title {
-            font-size: 20pt;
-            font-weight: 700;
-            color: var(--ink);
-            letter-spacing: -0.01em;
-            margin: 0;
-            line-height: 1.15;
-        }
-
-        .p-sub {
-            margin: 2mm 0 0;
-            font-size: 10.4pt;
+        .meta {
+            font-size: 9pt;
             color: var(--muted);
-        }
-
-        .p-meta {
-            display: grid;
-            grid-template-columns: 26mm 1fr;
-            gap: 1.6mm 5mm;
-            font-size: 9.2pt;
-            margin-bottom: 5mm;
-        }
-
-        .p-meta dt {
-            font-weight: 700;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-size: 8.2pt;
-            padding-top: 0.6mm;
-        }
-
-        .p-meta dd {
-            margin: 0;
-            color: var(--ink);
-        }
-
-        h4.block {
-            font-size: 8.4pt;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-            color: var(--accent);
-            font-weight: 700;
-            margin: 0 0 2.5mm;
+            margin: 0 0 5mm;
         }
 
         .lede {
-            font-size: 10.4pt;
-            line-height: 1.56;
+            font-size: 10.6pt;
+            line-height: 1.62;
             color: var(--ink);
-            margin: 0 0 5mm;
+            margin: 0 0 6mm;
+            max-width: 158mm;
         }
 
-        ul.tight {
-            margin: 0 0 5mm;
-            padding-left: 4.6mm;
-        }
-
-        ul.tight li {
-            margin-bottom: 1.4mm;
-        }
-
-        ul.tight li::marker {
-            color: var(--accent);
-        }
-
-        .cards {
-            display: grid;
-            gap: 3mm;
-            margin-bottom: 5mm;
-        }
-
-        .cards.two {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .card {
-            border: 1px solid var(--line);
-            border-left: 3px solid var(--navy);
-            padding: 3.5mm 4mm;
-            background: var(--wash);
-        }
-
-        .card b {
-            display: block;
-            color: var(--ink);
-            font-size: 9.8pt;
-            margin-bottom: 1.2mm;
-        }
-
-        .card p {
-            margin: 0;
-            font-size: 9.2pt;
-            line-height: 1.5;
-        }
-
-        .chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.8mm;
-        }
-
-        .chips span {
-            border: 1px solid var(--line);
-            border-radius: 999px;
-            padding: 0.8mm 3mm;
+        h3 {
             font-size: 8.4pt;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--muted);
             font-weight: 600;
-            color: var(--navy);
-            background: #fff;
+            margin: 0 0 3mm;
         }
 
-        /* ---------- screenshots ---------- */
+        ul.pts {
+            margin: 0 0 6mm;
+            padding: 0;
+            list-style: none;
+        }
 
-        .shots {
+        ul.pts li {
+            padding: 0 0 2.2mm 6mm;
+            position: relative;
+        }
+
+        ul.pts li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2.3mm;
+            width: 2.6mm;
+            height: 1px;
+            background: var(--muted);
+        }
+
+        .stack {
+            position: absolute;
+            left: 18mm;
+            right: 18mm;
+            bottom: 16mm;
+            border-top: 1px solid var(--rule);
+            padding-top: 3mm;
+            font-size: 8.8pt;
+            color: var(--muted);
+        }
+
+        /* ---------- images ---------- */
+
+        .shot {
+            display: block;
+            width: 100%;
+            border: 1px solid var(--rule);
+            object-fit: cover;
+            object-position: top center;
+            margin-bottom: 3mm;
+        }
+
+        .pair {
             display: grid;
-            gap: 3.5mm;
-            margin-bottom: 5mm;
-        }
-
-        .shots.two {
             grid-template-columns: 1fr 1fr;
+            gap: 4mm;
+            margin-bottom: 6mm;
         }
 
-        .shots.three {
-            grid-template-columns: 1fr 1fr 1fr;
+        .pair .shot {
+            margin-bottom: 0;
+        }
+
+        .poster {
+            background: var(--faint);
+            border: 1px solid var(--rule);
+            height: 96mm;
+            object-fit: contain;
+            width: 100%;
+            display: block;
+        }
+
+        figcaption {
+            margin-top: 1.6mm;
+            font-size: 8.2pt;
+            color: var(--muted);
         }
 
         figure {
             margin: 0;
         }
 
-        figure img {
-            display: block;
-            width: 100%;
-            border: 1px solid var(--line);
-            background: var(--wash);
-        }
-
-        figcaption {
-            margin-top: 1.5mm;
-            font-size: 8.4pt;
-            color: var(--muted);
-        }
-
-        .pending {
-            border: 1.5px dashed #c3ccd6;
-            background: repeating-linear-gradient(45deg, #fafbfc, #fafbfc 6px, #f2f5f8 6px, #f2f5f8 12px);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6mm 4mm;
-            color: #8b97a4;
-        }
-
-        .pending b {
-            display: block;
-            font-size: 9pt;
-            color: #66727f;
-            margin-bottom: 1mm;
-        }
-
-        .pending small {
-            font-size: 8pt;
-            line-height: 1.45;
-        }
-
         /* ---------- diagram ---------- */
 
         .diagram {
-            border: 1px solid var(--line);
-            background: var(--wash);
-            padding: 5mm;
+            border: 1px solid var(--rule);
+            padding: 5mm 4mm;
             margin-bottom: 6mm;
         }
 
@@ -354,55 +263,42 @@
             height: auto;
         }
 
-        /* ---------- more-work grid ---------- */
+        /* ---------- split + grid ---------- */
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 78mm;
+            gap: 8mm;
+            align-items: start;
+        }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 5mm 6mm;
+            gap: 6mm 7mm;
         }
 
-        .mini figure img {
-            height: 34mm;
-            object-fit: cover;
-            object-position: top center;
-        }
-
-        .mini h5 {
+        .grid h4 {
             margin: 2.5mm 0 1mm;
             font-size: 11pt;
+            font-weight: 600;
             color: var(--ink);
         }
 
-        .mini p {
+        .grid p {
             margin: 0 0 1.5mm;
-            font-size: 9pt;
+            font-size: 9.2pt;
             line-height: 1.5;
         }
 
-        .mini .chips span {
-            font-size: 7.8pt;
-            padding: 0.5mm 2.2mm;
+        .grid .shot {
+            height: 32mm;
+            margin-bottom: 0;
         }
 
-        .link {
-            font-family: 'Consolas', 'Courier New', monospace;
-            font-size: 8.6pt;
-            color: var(--navy);
-            text-decoration: none;
-        }
-
-        .foot {
-            position: absolute;
-            left: 16mm;
-            right: 16mm;
-            bottom: 9mm;
-            display: flex;
-            justify-content: space-between;
-            font-size: 8pt;
+        .grid small {
+            font-size: 8.4pt;
             color: var(--muted);
-            border-top: 1px solid var(--line-soft);
-            padding-top: 2.5mm;
         }
 
         @media print {
@@ -425,482 +321,320 @@
                 page-break-after: auto;
                 break-after: auto;
             }
-
-            a {
-                color: var(--navy);
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ============================ COVER ============================ -->
+    <!-- ===================== COVER ===================== -->
     <section class="page cover">
-        <div class="cover-top">
-            <p class="cover-eyebrow">Selected work &middot; 2026</p>
-            <h1 class="cover-name">Thanapat<span>Aupprathumwipanon</span></h1>
-            <p class="cover-role">Software Engineer &middot; Full-Stack Developer</p>
-            <div class="cover-rule"></div>
-            <p class="cover-intro">
-                Computer Engineering student at Chulalongkorn University. I build systems that other people
-                depend on &mdash; a mentorship platform carrying <strong>1,000+ mentors and mentees</strong>,
-                registration flows that absorbed <strong>5,000+ students</strong> on opening day, and a
-                retrieval-augmented reporting API answering to a <strong>Thai government agency's</strong>
-                integration contract.
-                <br><br>
-                What follows is the work I would want to be judged on, and the reasoning behind it.
+        <div>
+            <p class="eyebrow">Selected work &middot; 2026</p>
+            <h1>Thanapat<br>Aupprathumwipanon</h1>
+            <p class="role">Software Engineer</p>
+            <p class="intro">
+                Computer Engineering student at Chulalongkorn University. I work on things that go into production
+                &mdash; a mentoring platform used by <b>1,000+ people</b>, registration sites for <b>5,000+
+                    students</b>, and a reporting API for a <b>Thai government agency</b>.
             </p>
         </div>
 
-        <div class="cover-bottom">
-            <div class="cover-index">
-                <div><b>01</b><span>Wise Mentoring Ship</span></div>
-                <div><b>04</b><span>First Date &amp; RubpuenKaomai</span></div>
-                <div><b>02</b><span>RAG GIS API &mdash; ONEP</span></div>
-                <div><b>05</b><span>Agaya</span></div>
-                <div><b>03</b><span>Tax Tracker</span></div>
-                <div><b>06</b><span>Also built</span></div>
+        <div>
+            <div class="index">
+                <ol>
+                    <li><i>01</i><b>Wise Mentoring Ship</b></li>
+                    <li><i>02</i><b>RAG-GIS Heritage Impact System</b></li>
+                    <li><i>03</i><b>Tax Tracker</b></li>
+                    <li><i>04</i><b>First Date &amp; RubpuenKaomai 2026</b></li>
+                    <li><i>05</i><b>Agaya</b></li>
+                    <li><i>06</i><b>Also built</b></li>
+                </ol>
             </div>
-            <div class="cover-contact">
-                <span>Bangkok, Thailand</span>
-                <span>+66 99-009-0809</span>
-                <span>thanapat.aupp@gmail.com</span>
-                <a href="https://github.com/miramsalp">github.com/miramsalp</a>
+            <p class="contact">
+                Bangkok, Thailand &nbsp;&middot;&nbsp; +66 99-009-0809 &nbsp;&middot;&nbsp; thanapat.aupp@gmail.com<br>
+                <a href="https://github.com/miramsalp">github.com/miramsalp</a> &nbsp;&middot;&nbsp;
                 <a href="https://personal-website-miramsalp.vercel.app">personal-website-miramsalp.vercel.app</a>
-            </div>
+            </p>
         </div>
     </section>
 
-    <!-- ============================ 01 ============================ -->
+    <!-- ===================== 01 ===================== -->
     <section class="page">
-        <div class="p-head">
-            <div class="p-num">01</div>
-            <div class="p-headtext">
-                <h2 class="p-title">Wise Mentoring Ship</h2>
-                <p class="p-sub">A cross-university mentorship platform &mdash; built at an agency, then handed to me to
-                    keep.</p>
-            </div>
+        <div class="head">
+            <span class="n">01</span>
+            <h2>Wise Mentoring Ship</h2>
         </div>
-
-        <dl class="p-meta">
-            <dt>Role</dt>
-            <dd>Software Engineer Intern, <strong>Skooldio</strong> (Feb &ndash; Jul 2026) &rarr; Software Engineer
-                (Part-time), <strong>Wise</strong> (Aug 2026 &ndash; present)</dd>
-            <dt>Scale</dt>
-            <dd>1,000+ mentors and mentees across Thai universities</dd>
-            <dt>Team</dt>
-            <dd>Co-developed features alongside the engineering manager</dd>
-        </dl>
-
-        <p class="lede">
-            Universities had no shared way to pair students with mentors: matching happened in spreadsheets and chat
-            groups, and nobody could see the state of a request once it left the room. Wise Mentoring Ship turns that
-            into one platform &mdash; mentees browse and request, mentors accept or decline, and administrators can see
-            and correct the whole pipeline.
+        <p class="meta">
+            Software Engineer Intern, Skooldio &middot; Feb &ndash; Jul 2026 &nbsp;&rarr;&nbsp; Software Engineer
+            (Part-time), Wise &middot; Aug 2026 &ndash; now &nbsp;&middot;&nbsp; 1,000+ mentors and mentees
         </p>
 
-        <div class="shots two">
-            <figure>
-                <div class="pending" style="height:45mm">
-                    <b>Screenshot needed</b>
-                    <small>Mentee dashboard or the paginated<br>explore page (logged-in view)</small>
-                </div>
-            </figure>
-            <figure>
-                <div class="pending" style="height:45mm">
-                    <b>Screenshot needed</b>
-                    <small>Registration flow, or the admin<br>back-office handling a request</small>
-                </div>
-            </figure>
-        </div>
+        <p class="lede">
+            An on-demand mentoring platform for Thai universities. A student books a session, a mentor accepts, and an
+            admin can see the whole queue.
+        </p>
 
-        <h4 class="block">What I built</h4>
-        <ul class="tight">
-            <li>The registration flow, the mentee-request and mentor-handling logic, the dashboard, the homepage, the
-                paginated explore pages, and the admin back-office flow &mdash; front end through to API, on top of the base
-                design tokens and reusable components I set up for the rest of the UI.</li>
-            <li>A data-migration plan and the scripts behind it, to move records already in use into the new schema
-                without losing or duplicating a relationship.</li>
-            <li>The CI/CD pipeline, and the LINE integration &mdash; Official Account, Flex messages and the Developer
-                APIs &mdash; with GCP Cloud Tasks driving scheduled and asynchronous notifications.</li>
+        <img class="shot" src="./assets/demo_wise1.png" alt="Wise landing page" style="height:52mm">
+        <figure style="margin-bottom:6mm">
+            <img class="shot" src="./assets/demo_wise2.png" alt="Five-step booking flow" style="height:52mm">
+            <figcaption>The five-step booking flow &mdash; one of the parts I built front end through to the API.
+            </figcaption>
+        </figure>
+
+        <h3>What I built</h3>
+        <ul class="pts">
+            <li>Registration, mentee requests, mentor handling, the dashboard, the explore pages, and the admin
+                back-office.</li>
+            <li>Migration scripts that moved records already in use into the new schema.</li>
+            <li>CI/CD, and LINE notifications sent through GCP Cloud Tasks so a slow push never blocks a user action.
+            </li>
+            <li>The design tokens and shared components the rest of the UI was built from.</li>
         </ul>
 
-        <h4 class="block">How it was built</h4>
-        <div class="cards two">
-            <div class="card">
-                <b>Clean architecture, not just clean files</b>
-                <p>DTOs, Entities and Use Cases kept apart, so a change to the transport layer never reaches into
-                    domain logic. Swagger docs generated from the same definitions the API validates against.</p>
-            </div>
-            <div class="card">
-                <b>Notifications that survive a slow request</b>
-                <p>Scheduled and fan-out LINE messages run through GCP Cloud Tasks rather than inside the request that
-                    triggered them, so a slow push never becomes a failed user action.</p>
-            </div>
-        </div>
+        <h3>After the contract</h3>
+        <ul class="pts">
+            <li>Wise hired me directly when the Skooldio engagement ended. I still own the backend, and still ship to
+                it.</li>
+        </ul>
 
-        <h4 class="block">Still mine</h4>
-        <p style="margin:0 0 6mm">
-            When the Skooldio engagement ended in July, Wise retained me directly to keep owning the backend of what
-            we had built &mdash; shipping API and back-office features, resolving production issues against a live user
-            base, and extending into the React front end when a change spans the stack.
+        <p class="stack">React &middot; NestJS &middot; TypeScript &middot; PostgreSQL &middot; GCP &middot; LINE API
         </p>
-
-        <div class="chips">
-            <span>React</span><span>NestJS</span><span>TypeScript</span><span>PostgreSQL</span><span>GCP Cloud
-                Tasks</span><span>LINE OA / Flex</span><span>Swagger</span><span>CI/CD</span>
-        </div>
-
-        <div class="foot"><span>Wise Mentoring Ship</span><span>Thanapat Aupprathumwipanon &middot; 01</span></div>
     </section>
 
-    <!-- ============================ 02 ============================ -->
+    <!-- ===================== 02 ===================== -->
     <section class="page">
-        <div class="p-head">
-            <div class="p-num">02</div>
-            <div class="p-headtext">
-                <h2 class="p-title">RAG GIS API</h2>
-                <p class="p-sub">Turning GIS impact analyses into Thai environmental reports &mdash; for a government
-                    agency that retries on failure.</p>
-            </div>
+        <div class="head">
+            <span class="n">02</span>
+            <h2>RAG-GIS Heritage Impact System</h2>
+            <p class="fullname">RAG-GIS System for Assessing Impacts on Art and Cultural Heritage Sites</p>
         </div>
-
-        <dl class="p-meta">
-            <dt>Role</dt>
-            <dd>Contributor &mdash; the <code>/analysis</code> endpoint end to end, plus SSE streaming for the chat API
-            </dd>
-            <dt>Client</dt>
-            <dd>ONEP &mdash; Office of Natural Resources and Environmental Policy and Planning</dd>
-            <dt>Source</dt>
-            <dd><a class="link" href="https://github.com/dannifyz/rag-gis-api">github.com/dannifyz/rag-gis-api</a></dd>
-        </dl>
+        <p class="meta">
+            Capstone project &nbsp;&middot;&nbsp; Contributor &mdash; the <code>/analysis</code> endpoint, and
+            SSE streaming for the chat API &nbsp;&middot;&nbsp; Client: ONEP, a Thai government agency
+        </p>
 
         <p class="lede">
-            Before a project breaks ground, ONEP runs a spatial analysis: which protected natural sites, cultural sites
-            and conservation zones fall inside the legal radius, how close, how much overlap. The output is structured
-            data. What the agency actually needs is a Thai narrative report that reads those numbers back with the right
-            regulation cited beside them &mdash; work that used to be done by hand. This API does it.
+            Before a project breaks ground, ONEP checks whether it sits too close to protected natural sites and
+            art and cultural heritage sites. That check produces numbers. This API turns them into the Thai report an
+            officer would otherwise write by hand.
         </p>
 
         <div class="diagram">
-            <svg viewBox="0 0 720 178" role="img" aria-label="Request pipeline: ONEP posts an analysis payload; counts and citations are assembled deterministically while the legal corpus is retrieved; the model writes only the closing paragraph.">
+            <svg viewBox="0 0 700 168" role="img"
+                aria-label="ONEP posts an analysis payload; counts and citations are assembled in code while the legal corpus is retrieved; the model writes only the closing paragraph.">
                 <defs>
-                    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7"
+                    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6"
                         orient="auto-start-reverse">
-                        <path d="M 0 0 L 10 5 L 0 10 z" fill="#123a5e" />
+                        <path d="M0 0 L10 5 L0 10 z" fill="#111315" />
                     </marker>
                 </defs>
                 <style>
-                    .bx { fill: #fff; stroke: #123a5e; stroke-width: 1.4; }
-                    .bx-fixed { fill: #eaf1f7; stroke: #123a5e; stroke-width: 1.4; }
-                    .bx-llm { fill: #fbeee7; stroke: #b85227; stroke-width: 1.4; }
-                    .t { font: 600 11px 'Segoe UI', sans-serif; fill: #14161a; }
-                    .s { font: 9.5px 'Segoe UI', sans-serif; fill: #5b6470; }
-                    .lbl { font: 700 8.5px 'Segoe UI', sans-serif; fill: #b85227; letter-spacing: .09em; }
-                    .ln { stroke: #123a5e; stroke-width: 1.4; fill: none; marker-end: url(#ar); }
+                    .b { fill: #fff; stroke: #111315; stroke-width: 1.2; }
+                    .bf { fill: #f5f6f8; stroke: #111315; stroke-width: 1.2; }
+                    .bd { fill: #fff; stroke: #8c9197; stroke-width: 1.2; stroke-dasharray: 4 3; }
+                    .t { font: 600 11px 'Segoe UI', sans-serif; fill: #111315; }
+                    .s { font: 9.5px 'Segoe UI', sans-serif; fill: #6c7278; }
+                    .k { font: 600 8px 'Segoe UI', sans-serif; fill: #8c9197; letter-spacing: .1em; }
+                    .l { stroke: #111315; stroke-width: 1.2; fill: none; marker-end: url(#a); }
                 </style>
 
-                <rect class="bx" x="2" y="62" width="104" height="46" rx="4" />
-                <text class="t" x="54" y="82" text-anchor="middle">ONEP</text>
-                <text class="s" x="54" y="97" text-anchor="middle">POST /analysis</text>
+                <rect class="b" x="2" y="58" width="96" height="44" rx="3" />
+                <text class="t" x="50" y="77" text-anchor="middle">ONEP</text>
+                <text class="s" x="50" y="91" text-anchor="middle">POST /analysis</text>
 
-                <path class="ln" d="M108 85 H 158" />
+                <path class="l" d="M100 80 H 146" />
 
-                <rect class="bx" x="160" y="52" width="118" height="66" rx="4" />
-                <text class="t" x="219" y="76" text-anchor="middle">Validate</text>
-                <text class="s" x="219" y="91" text-anchor="middle">Pydantic schemas,</text>
-                <text class="s" x="219" y="104" text-anchor="middle">timing-safe API key</text>
+                <rect class="b" x="148" y="58" width="106" height="44" rx="3" />
+                <text class="t" x="201" y="77" text-anchor="middle">Validate</text>
+                <text class="s" x="201" y="91" text-anchor="middle">schema, API key</text>
 
-                <path class="ln" d="M280 70 H 322" />
-                <path class="ln" d="M280 100 H 322" />
+                <path class="l" d="M256 68 H 300" />
+                <path class="l" d="M256 92 H 300" />
 
-                <text class="lbl" x="324" y="16">DETERMINISTIC</text>
-                <rect class="bx-fixed" x="324" y="24" width="180" height="58" rx="4" />
-                <text class="t" x="414" y="46" text-anchor="middle">Report skeleton</text>
-                <text class="s" x="414" y="61" text-anchor="middle">site counts &middot; categories</text>
-                <text class="s" x="414" y="74" text-anchor="middle">ONEP's own citations</text>
+                <text class="k" x="302" y="14">WRITTEN BY CODE</text>
+                <rect class="bf" x="302" y="20" width="172" height="52" rx="3" />
+                <text class="t" x="388" y="41" text-anchor="middle">Report skeleton</text>
+                <text class="s" x="388" y="56" text-anchor="middle">counts &middot; categories &middot; citations</text>
 
-                <text class="lbl" x="324" y="104">RETRIEVAL</text>
-                <rect class="bx" x="324" y="112" width="180" height="58" rx="4" />
-                <text class="t" x="414" y="134" text-anchor="middle">Legal corpus</text>
-                <text class="s" x="414" y="149" text-anchor="middle">query built from the</text>
-                <text class="s" x="414" y="162" text-anchor="middle">categories actually hit</text>
+                <text class="k" x="302" y="98">RETRIEVED</text>
+                <rect class="b" x="302" y="104" width="172" height="52" rx="3" />
+                <text class="t" x="388" y="125" text-anchor="middle">Legal corpus</text>
+                <text class="s" x="388" y="140" text-anchor="middle">only the categories hit</text>
 
-                <path class="ln" d="M506 53 H 540 V 78" />
-                <path class="ln" d="M506 141 H 540 V 106" />
+                <path class="l" d="M476 46 H 508 V 72" />
+                <path class="l" d="M476 130 H 508 V 100" />
 
-                <rect class="bx-llm" x="542" y="62" width="176" height="46" rx="4" />
-                <text class="t" x="630" y="82" text-anchor="middle">Model writes the</text>
-                <text class="t" x="630" y="97" text-anchor="middle">closing paragraph only</text>
+                <text class="k" x="512" y="52">WRITTEN BY THE MODEL</text>
+                <rect class="bd" x="512" y="58" width="186" height="44" rx="3" />
+                <text class="t" x="605" y="77" text-anchor="middle">Closing paragraph</text>
+                <text class="s" x="605" y="91" text-anchor="middle">and nothing else</text>
             </svg>
         </div>
 
-        <h4 class="block">The decisions I would defend in review</h4>
-        <div class="cards two">
-            <div class="card">
-                <b>Numbers cannot be allowed to drift</b>
-                <p>Every count, category breakdown and legal citation is assembled in code before the model is called.
-                    The model is handed that finished skeleton and asked only for a closing synthesis paragraph &mdash;
-                    so there is no figure in the report a hallucination could move.</p>
-            </div>
-            <div class="card">
-                <b>Fail the way the caller expects</b>
-                <p>ONEP retries on 5xx, 429 and timeout, but treats 4xx as permanent rejection. So an empty model
-                    response raises rather than returning 200 with a half-written report, and the endpoint budgets 100s
-                    inside their 120s disconnect window &mdash; a hang becomes a clean retry, not a dropped request.</p>
-            </div>
-            <div class="card">
-                <b>Forward-compatible on purpose</b>
-                <p>Unknown fields are ignored and an unrecognised <code>schema_version</code> is logged and processed
-                    rather than rejected: a future version of their payload still carries every field we read, and
-                    refusing it would break a live integration over a version string.</p>
-            </div>
-            <div class="card">
-                <b>Retrieval grounded in this project</b>
-                <p>The RAG query is built from the project type plus only the site categories with a non-zero count, so
-                    retrieval is not steered toward law about sites this project never touches.</p>
-            </div>
-        </div>
+        <h3>Why it is built this way</h3>
+        <ul class="pts">
+            <li>Code writes every count and every legal citation. The model only writes the last paragraph, so no
+                number in the report can be invented.</li>
+            <li>ONEP retries a 5xx but gives up on a 4xx. So an empty answer from the model raises an error instead of
+                returning half a report with a 200.</li>
+            <li>The endpoint gives up at 100 seconds, inside ONEP's 120-second timeout. A hang becomes a retry, not a
+                lost request.</li>
+            <li>Unknown fields are ignored rather than rejected, so a newer payload from them still works.</li>
+        </ul>
 
-        <p style="margin:0 0 5mm;font-size:9.4pt">
-            <strong>Also contributed:</strong> SSE token streaming for the chat API, so answers render as they are
-            generated rather than after the full response completes, with source listing for the chunks behind each
-            answer.
-        </p>
+        <h3>What I contributed</h3>
+        <ul class="pts">
+            <li>The request schemas and the controller for the endpoint ONEP calls.</li>
+            <li>The report assembly, and the retrieval query built from the site categories a project actually hits.
+            </li>
+            <li>SSE token streaming for the chat API, so an answer appears as it is written instead of all at once at
+                the end.</li>
+        </ul>
 
-        <div class="chips">
-            <span>Python 3.14</span><span>FastAPI</span><span>Pydantic</span><span>Google Gemini</span><span>Vector
-                search</span><span>Typhoon OCR</span><span>SSE</span><span>uv</span><span>Ruff</span>
-        </div>
-
-        <div class="foot"><span>RAG GIS API &middot; ONEP</span><span>Thanapat Aupprathumwipanon &middot; 02</span>
-        </div>
+        <p class="stack">Python &middot; FastAPI &middot; Pydantic &middot; Vector search &middot; SSE</p>
     </section>
 
-    <!-- ============================ 03 ============================ -->
+    <!-- ===================== 03 ===================== -->
     <section class="page">
-        <div class="p-head">
-            <div class="p-num">03</div>
-            <div class="p-headtext">
-                <h2 class="p-title">Tax Tracker</h2>
-                <p class="p-sub">Capital-gains tax for Thai investors, computed from broker PDFs that never leave the
-                    browser.</p>
-            </div>
+        <div class="head">
+            <span class="n">03</span>
+            <h2>Tax Tracker</h2>
         </div>
-
-        <dl class="p-meta">
-            <dt>Role</dt>
-            <dd>Sole author</dd>
-            <dt>Why</dt>
-            <dd>Built for my own filing, after doing a year of it by hand in a spreadsheet</dd>
-            <dt>Source</dt>
-            <dd><a class="link" href="https://github.com/miramsalp/tax-tracker">github.com/miramsalp/tax-tracker</a>
-            </dd>
-        </dl>
+        <p class="meta">Solo &nbsp;&middot;&nbsp; Built for my own tax filing</p>
 
         <p class="lede">
-            Thai investors holding foreign equities have to report realised capital gains, and their broker gives them
-            confirmation notes as PDFs &mdash; one per trade, no export. Reconstructing FIFO cost basis across a year
-            of those by hand is slow and easy to get wrong. Drop the PDFs into the page and it does the accounting.
+            Thai investors have to report realised gains on foreign shares, and the broker only hands over PDFs &mdash;
+            one per trade. Drop them into the page and it does the FIFO accounting.
         </p>
 
-        <div class="shots two">
-            <figure>
-                <div class="pending" style="height:56mm">
-                    <b>Screenshot needed</b>
-                    <small>The drop zone with files loaded,<br>or the computed gain/loss table</small>
-                </div>
-            </figure>
-            <figure>
-                <div class="pending" style="height:56mm">
-                    <b>Screenshot needed</b>
-                    <small>The annual tax summary,<br>or the statement-validation view</small>
-                </div>
-            </figure>
-        </div>
+        <img class="shot" src="./assets/demo_tax1.png" alt="Annual tax figures" style="height:56mm">
+        <figure style="margin-bottom:6mm">
+            <img class="shot" src="./assets/demo_tax2.png" alt="Realised profit and loss by month"
+                style="height:48mm">
+            <figcaption>Realised profit and loss by month, computed from the confirmation notes.</figcaption>
+        </figure>
 
-        <h4 class="block">The decisions I would defend in review</h4>
-        <div class="cards two">
-            <div class="card">
-                <b>Refuse rather than guess</b>
-                <p>The parser reads its broker's layout by character position, and rejects a document it does not
-                    recognise instead of inferring structure. A wrong number here goes onto a tax return &mdash; a
-                    confident guess is worse than a refusal.</p>
-            </div>
-            <div class="card">
-                <b>The data has nowhere to go</b>
-                <p>No server, no database, no upload. Parsing runs entirely in the browser and the Content Security
-                    Policy is locked to <code>connect-src 'self'</code>, so a complete trade history cannot be
-                    exfiltrated even by a dependency that wanted to.</p>
-            </div>
-            <div class="card">
-                <b>Check the arithmetic against a second source</b>
-                <p>Confirmation notes are cross-checked against monthly statements, so a missing or duplicated trade
-                    surfaces as a discrepancy rather than quietly shifting every FIFO lot after it.</p>
-            </div>
-            <div class="card">
-                <b>Say what it cannot do</b>
-                <p>Corporate actions &mdash; splits and stock dividends &mdash; break FIFO cost basis, so the tool
-                    warns rather than reporting a clean number it has no basis for. Documented limits, not hidden
-                    ones.</p>
-            </div>
-        </div>
+        <h3>Why it is built this way</h3>
+        <ul class="pts">
+            <li>Nothing is uploaded. Parsing runs in the browser and the CSP blocks outgoing requests &mdash; the
+                banner at the top tells you how to check that yourself.</li>
+            <li>The parser refuses a PDF it does not recognise. A wrong number here ends up on a tax return.</li>
+            <li>It shows what it could not work out: the sells with unknown cost basis are listed in red, not quietly
+                averaged into the total.</li>
+            <li>Confirmation notes are checked against the monthly statement, so a missing trade shows up instead of
+                shifting every lot after it.</li>
+        </ul>
 
-        <div class="chips">
-            <span>TypeScript</span><span>Vite</span><span>In-browser PDF parsing</span><span>FIFO cost
-                basis</span><span>CSP</span><span>Vercel</span>
-        </div>
-
-        <div class="foot"><span>Tax Tracker</span><span>Thanapat Aupprathumwipanon &middot; 03</span></div>
+        <p class="stack">TypeScript &middot; Vite &middot; In-browser PDF parsing &middot; CSP</p>
     </section>
 
-    <!-- ============================ 04 + 05 ============================ -->
+    <!-- ===================== 04 + 05 ===================== -->
     <section class="page">
-        <div class="p-head">
-            <div class="p-num">04</div>
-            <div class="p-headtext">
-                <h2 class="p-title">First Date &amp; RubpuenKaomai 2026</h2>
-                <p class="p-sub">Freshman-welcome registration for 5,000+ students, on a day when everyone arrives at
-                    once.</p>
-            </div>
+        <div class="head">
+            <span class="n">04</span>
+            <h2>First Date &amp; RubpuenKaomai 2026</h2>
         </div>
+        <p class="meta">Frontend Developer, ISD &mdash; Chulalongkorn University &middot; Jul 2026</p>
 
-        <dl class="p-meta">
-            <dt>Role</dt>
-            <dd>Frontend Developer &mdash; ISD, Chulalongkorn University (Jul 2026)</dd>
-            <dt>Scale</dt>
-            <dd>5,000+ students, concentrated into the opening hours of sign-up</dd>
-        </dl>
-
-        <p class="lede">
-            Two student-organisation platforms for Chulalongkorn's freshman-welcome events. I built the registration
-            flow, the landing page and the edit-profile UI, and integrated the APIs behind them &mdash; the part of the
-            system that has to stay upright while an entire incoming year signs up in the same hour.
-        </p>
-
-        <div class="shots two">
-            <figure>
-                <div class="pending" style="height:48mm">
-                    <b>Screenshot needed</b>
-                    <small>First Date landing page</small>
-                </div>
-            </figure>
-            <figure>
-                <div class="pending" style="height:48mm">
-                    <b>Screenshot needed</b>
-                    <small>Registration or edit-profile screen</small>
-                </div>
-            </figure>
-        </div>
-
-        <div class="chips" style="margin-bottom:10mm">
-            <span>React</span><span>API integration</span><span>Responsive UI</span>
-        </div>
-
-        <div class="p-head" style="margin-top:2mm">
-            <div class="p-num">05</div>
-            <div class="p-headtext">
-                <h2 class="p-title">Agaya</h2>
-                <p class="p-sub">A middleman e-commerce platform &mdash; and the first project I led rather than only
-                    built.</p>
-            </div>
-        </div>
-
-        <dl class="p-meta">
-            <dt>Role</dt>
-            <dd>Team Lead &mdash; Agile sprint coordination, full-stack task ownership, end-to-end delivery</dd>
-            <dt>Source</dt>
-            <dd><a class="link" href="https://github.com/Pachara2103/Agaya">github.com/Pachara2103/Agaya</a></dd>
-        </dl>
-
-        <div class="shots two">
-            <figure>
-                <img src="./assets/demoaga.png" alt="Agaya storefront" style="height:46mm;object-fit:cover;object-position:top center">
-            </figure>
+        <div class="split" style="margin-bottom:12mm">
             <div>
-                <p style="margin:0 0 3mm">
-                    A platform sitting between vendors and customers, handling the listing, the order and the money in
-                    between. I ran the sprints and owned delivery across the stack, and built the payment and media
-                    paths myself: Stripe for processing, Cloudinary for product-image storage and delivery.
+                <p class="lede" style="margin-bottom:5mm">
+                    Two freshman-welcome sites for Chulalongkorn student organisations. Around 5,000 students sign up,
+                    most of them in the first hour.
                 </p>
-                <div class="chips">
-                    <span>Full-stack</span><span>Stripe</span><span>Cloudinary</span><span>Agile</span>
-                </div>
+                <ul class="pts" style="margin-bottom:4mm">
+                    <li>Registration flow, landing page and edit-profile screen.</li>
+                    <li>The API integration behind all three.</li>
+                    <li>Mobile-first: almost every sign-up arrives on a phone.</li>
+                </ul>
+                <p style="font-size:8.8pt;color:var(--muted);margin:0">React</p>
+            </div>
+            <div class="pair" style="margin-bottom:0;gap:3mm">
+                <img class="poster" src="./assets/demo_chula1.png" alt="First Date landing page">
+                <img class="poster" src="./assets/demo_chula2.png" alt="RubpuenKaomai landing page">
             </div>
         </div>
 
-        <div class="foot"><span>ISD &middot; Agaya</span><span>Thanapat Aupprathumwipanon &middot; 04 &ndash; 05</span>
+        <div class="head">
+            <span class="n">05</span>
+            <h2>Agaya</h2>
+        </div>
+        <p class="meta">Team Lead &middot; group project</p>
+
+        <div class="split">
+            <div>
+                <p class="lede" style="margin-bottom:5mm">
+                    A marketplace sitting between vendors and buyers, handling the listing, the order and the money in
+                    between.
+                </p>
+                <ul class="pts" style="margin-bottom:4mm">
+                    <li>Ran the sprints and owned delivery across the stack.</li>
+                    <li>Built the Stripe payment flow and Cloudinary image handling.</li>
+                </ul>
+                <p style="font-size:8.8pt;color:var(--muted);margin:0">Stripe &middot; Cloudinary</p>
+            </div>
+            <img class="shot" src="./assets/demoaga.png" alt="Agaya storefront" style="height:64mm;margin-bottom:0;object-position:top left">
         </div>
     </section>
 
-    <!-- ============================ 06 ============================ -->
+    <!-- ===================== 06 ===================== -->
     <section class="page">
-        <div class="p-head">
-            <div class="p-num">06</div>
-            <div class="p-headtext">
-                <h2 class="p-title">Also built</h2>
-                <p class="p-sub">Smaller pieces, each one built to answer a question I actually had.</p>
-            </div>
+        <div class="head">
+            <span class="n">06</span>
+            <h2>Also built</h2>
         </div>
+        <p class="meta">Side projects, each one built to answer a question I actually had</p>
 
         <div class="grid">
-            <div class="mini">
-                <figure><img src="./assets/demo_stockanalysis.png" alt="Ad Stack 2030 equity model"></figure>
-                <h5>Ad Stack 2030</h5>
-                <p>An interactive equity model covering 37 companies across 8 sectors. Edit the drivers &mdash; growth,
-                    margin, share count &mdash; and every projection, bear/base/bull case, multiple and IRR through 2030
-                    re-runs live in the browser.</p>
-                <div class="chips"><span>React 19</span><span>Vite</span><span>Financial modelling</span></div>
+            <div>
+                <img class="shot" src="./assets/demo_stockanalysis.png" alt="Ad Stack 2030">
+                <h4>Ad Stack 2030</h4>
+                <p>An equity model for 37 companies. Edit the growth and margin assumptions and every projection,
+                    scenario and IRR through 2030 re-runs in the browser.</p>
+                <small>React 19 &middot; Vite</small>
             </div>
 
-            <div class="mini">
-                <figure><img src="./assets/demokrapong.png" alt="Krapong-Go transit app"></figure>
-                <h5>Krapong-Go</h5>
-                <p>Real-time transit for Thonburi, my hometown. Passengers signal demand and drivers see it live on the
-                    map, so a driver knows there is someone waiting instead of guessing and running empty.</p>
-                <div class="chips"><span>Socket.IO</span><span>Redis</span><span>MongoDB</span><span>Docker</span>
-                </div>
+            <div>
+                <img class="shot" src="./assets/demokrapong.png" alt="Krapong-Go">
+                <h4>Krapong-Go</h4>
+                <p>Real-time transit for Thonburi, where I grew up. Passengers signal that they are waiting and drivers
+                    see it live, instead of guessing and running empty.</p>
+                <small>Socket.IO &middot; Redis &middot; MongoDB &middot; Docker</small>
             </div>
 
-            <div class="mini">
-                <figure><img src="./assets/demo_rul.png" alt="Predictive maintenance dashboard"></figure>
-                <h5>Predictive Maintenance</h5>
-                <p>Predicts remaining useful life of turbofan engines from NASA C-MAPSS sensor data. XGBoost benchmarked
-                    against Random Forest and Decision Tree, ending at RMSE 16.78 cycles and R&sup2; ~0.82, served
-                    through a live dashboard.</p>
-                <div class="chips"><span>Python</span><span>XGBoost</span><span>FastAPI</span><span>React</span></div>
+            <div>
+                <img class="shot" src="./assets/demo_rul.png" alt="Predictive maintenance dashboard">
+                <h4>Predictive Maintenance</h4>
+                <p>Predicts how many cycles a turbofan engine has left, from NASA sensor data. XGBoost, RMSE 16.78 and
+                    R&sup2; 0.82, served through a live dashboard.</p>
+                <small>Python &middot; XGBoost &middot; FastAPI &middot; React</small>
             </div>
 
-            <div class="mini">
-                <figure><img src="./assets/demo_stock.PNG" alt="Stock watcher dashboard"></figure>
-                <h5>Stock Watcher</h5>
-                <p>Automated price alerts pushed into a LINE group, with LINE Login for auth. Used daily by a private
-                    group of friends and family who were otherwise checking prices by hand.</p>
-                <div class="chips"><span>LINE Messaging API</span><span>LINE Login</span></div>
+            <div>
+                <img class="shot" src="./assets/demo_stock.PNG" alt="Stock watcher">
+                <h4>Stock Watcher</h4>
+                <p>Price alerts pushed into a LINE group. Used daily by friends and family who were otherwise checking
+                    prices by hand.</p>
+                <small>LINE Messaging API &middot; LINE Login</small>
             </div>
 
-            <div class="mini">
-                <figure><img src="./assets/demowebchat.png" alt="Otto webchat"></figure>
-                <h5>Otto Webchat</h5>
-                <p>A group chat app, built mainly to learn the deployment half: a load balancer on AWS Elastic
+            <div>
+                <img class="shot" src="./assets/demowebchat.png" alt="Otto webchat">
+                <h4>Otto Webchat</h4>
+                <p>A group chat app, built mostly to learn the deployment half: a load balancer on AWS Elastic
                     Beanstalk and a custom domain in front of it.</p>
-                <div class="chips"><span>AWS</span><span>Elastic Beanstalk</span><span>Node.js</span></div>
+                <small>AWS &middot; Elastic Beanstalk &middot; Node.js</small>
             </div>
 
-            <div class="mini">
-                <figure><img src="./assets/demopoke.png" alt="Pokemon weakness finder"></figure>
-                <h5>Mini-RAG &amp; other experiments</h5>
-                <p>A hybrid BM25-plus-embedding retriever over Thai environmental and arts law, chunked by legal
-                    article rather than token count and scored with Hit@k / Recall@k / Precision@k &mdash; the
-                    groundwork behind project 02. Alongside a VGA image switcher on a Basys3 FPGA, and a Pok&eacute;mon
-                    weakness finder built because no site answered the question fast enough.</p>
-                <div class="chips"><span>Python</span><span>BM25</span><span>Embeddings</span><span>Verilog</span>
-                </div>
+            <div>
+                <img class="shot" src="./assets/demopoke.png" alt="Pokemon weakness finder">
+                <h4>Smaller experiments</h4>
+                <p>A retriever over Thai law, chunked by legal article and scored with Hit@k and Recall@k &mdash; the
+                    groundwork behind 02. Plus an FPGA VGA switcher and a Pok&eacute;mon weakness finder.</p>
+                <small>Python &middot; BM25 &middot; Verilog</small>
             </div>
         </div>
-
-        <div class="foot"><span>Also built</span><span>Thanapat Aupprathumwipanon &middot; 06</span></div>
     </section>
 
 </body>
