@@ -1,1 +1,13 @@
+# Chrome user-data dir created by scripts/export-pdf.mjs
 .chrome-export-profile/
+
+# Vercel
+.vercel/
+
+# Node
+node_modules/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

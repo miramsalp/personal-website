@@ -3,18 +3,21 @@
  * already installed on this machine. No dependencies, no print dialog,
  * no browser headers/footers.
  *
- *   node export-pdf.mjs                              -> resume.html
- *   node export-pdf.mjs portfolio.html portfolio.pdf -> anything else
+ * Paths are resolved against the repo root, not this file, so it can be run
+ * from anywhere:
+ *
+ *   node scripts/export-pdf.mjs                              -> resume.html
+ *   node scripts/export-pdf.mjs portfolio.html portfolio.pdf -> anything else
  */
 import { spawn } from 'node:child_process';
 import { writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { dirname, join } from 'node:path';
 
-const here = dirname(fileURLToPath(import.meta.url));
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const [sourceArg, outputArg] = process.argv.slice(2);
-const SOURCE = join(here, sourceArg ?? 'resume.html');
-const OUTPUT = join(here, outputArg ?? 'Thanapat_Aupprathumwipanon_Resume.pdf');
+const SOURCE = join(root, sourceArg ?? 'resume.html');
+const OUTPUT = join(root, outputArg ?? 'Thanapat_Aupprathumwipanon_Resume.pdf');
 // Only the resume is supposed to be one page; a portfolio is meant to run long.
 const EXPECT_SINGLE_PAGE = !sourceArg;
 
@@ -36,7 +39,7 @@ const browser = spawn(chromePath, [
   '--headless',
   '--disable-gpu',
   '--remote-debugging-port=0',
-  `--user-data-dir=${join(here, '.chrome-export-profile')}`,
+  `--user-data-dir=${join(root, '.chrome-export-profile')}`,
   'about:blank',
 ]);
 
