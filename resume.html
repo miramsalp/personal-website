@@ -367,7 +367,7 @@
             <h3>Education</h3>
             <p class="small-text">
                 <strong>B.Eng. Computer Engineering, Chulalongkorn University</strong> &mdash;
-                <em>expected May 2027, GPA 3.52</em>
+                <em>expected May 2027, GPA 3.53</em>
             </p>
         </div>
 
@@ -383,28 +383,29 @@
                     Wise Mentoring Ship &mdash; cross-university mentorship platform &middot; React, NestJS, TypeScript
                 </p>
                 <ul>
-                    <li>Delivered end-to-end features for a platform now serving <strong>1,000+ mentors and
-                            mentees</strong>: registration, mentee-request and mentor-handling logic, dashboard, explore
-                        pages and the admin back-office.</li>
-                    <li>Authored the data-migration plan and scripts for the new schema, applied clean architecture
-                        (DTOs, Entities, Use Cases) with Swagger docs, set up CI/CD, and integrated LINE OA and Flex
-                        messages with GCP Cloud Tasks for async notifications.</li>
+                    <li>Top committer on the team. Built features across the NestJS API, React web app and admin
+                        back-office for a platform with <strong>2,000+ mentors and mentees</strong>: sign-up, mentee
+                        requests, mentor handling and dashboards.</li>
+                    <li>Wrote <strong>70+ API endpoints</strong> using clean architecture with Swagger docs, set up
+                        CI/CD, and added LINE OA notifications via GCP Cloud Tasks.</li>
                 </ul>
             </div>
 
             <div class="exp-block">
                 <div class="exp-header">
-                    <span class="exp-title">Software Engineer (Part-time) &mdash; Wise</span>
+                    <span class="exp-title">Full-Stack Developer (Part-time) &mdash; Wise</span>
                     <span class="exp-date">Aug 2026 &ndash; Present</span>
                 </div>
                 <p class="exp-subtitle">
                     Wise Mentoring Ship &mdash; continued ownership &middot; React, NestJS, TypeScript
                 </p>
                 <ul>
-                    <li>Retained directly by Wise after the Skooldio engagement, to keep owning the backend of the
-                        platform built during it.</li>
-                    <li>Ship new API and back-office features and resolve production issues against a live user base,
-                        extending into the React front end when a change spans the stack.</li>
+                    <li>Kept on by Wise after the Skooldio contract to work across the whole platform, front end and
+                        back end.</li>
+                    <li>Led the move of <strong>2,000+ accounts</strong>, with their mentoring history and files, from
+                        the old system to the new platform: planned it, wrote the scripts and ran the live migration.</li>
+                    <li>Build new features end to end, from the API to the React web app and back-office, and fix
+                        production issues.</li>
                 </ul>
             </div>
 
@@ -432,18 +433,16 @@
                     RAG-GIS Heritage Impact System <span style="font-weight:normal;font-size:0.9em">&mdash; capstone project</span>
                 </p>
                 <p class="small-text project-desc">
-                    A retrieval-augmented API turning GIS impact analyses into Thai heritage-impact reports for ONEP, a
-                    government agency. &middot; FastAPI &middot; Vector search &middot; SSE
+                    An API that writes Thai heritage-impact reports from GIS analysis results, for ONEP, a government
+                    agency. &middot; FastAPI &middot; RAG &middot; SSE
                 </p>
                 <ul>
-                    <li>Contributed the <code>/analysis</code> endpoint end to end &mdash; schemas, controller, report
-                        assembly, retrieval query &mdash; plus SSE token streaming for the chat API.</li>
-                    <li>Assembled site counts, category breakdowns and ONEP's own legal citations deterministically,
-                        leaving the model only a closing paragraph, so figures and references cannot drift under
-                        hallucination.</li>
-                    <li>Shaped failure handling to the caller's retry contract &mdash; a 100s budget inside their 120s
-                        disconnect window, 5xx on empty output &mdash; so an incomplete report is retryable, not a
-                        silent success.</li>
+                    <li>Built <code>/analysis</code>, the endpoint ONEP's GIS system calls: defined the request schema
+                        from their spec, turned the results into a RAG query and prompt, and returned the report.</li>
+                    <li>Site counts and legal references are filled in by code, so the LLM only writes the summary and
+                        cannot get the numbers wrong.</li>
+                    <li>Timeouts and empty answers return an error instead of a blank report, so ONEP can retry.</li>
+                    <li>Added streaming responses (SSE) to the chat API.</li>
                 </ul>
             </div>
 
@@ -456,25 +455,10 @@
                     &middot; Vite &middot; In-browser PDF parsing
                 </p>
                 <ul>
-                    <li>Parses broker confirmation notes in the browser and computes FIFO capital gains per security,
-                        cross-checked against monthly statements.</li>
-                    <li>No server or database, and a CSP locked to <code>connect-src 'self'</code> so trade data never
-                        leaves the machine; rejects unrecognised documents rather than guess at a figure that feeds a
-                        tax return.</li>
-                </ul>
-            </div>
-
-            <div class="project-block">
-                <p class="project-title">
-                    Agaya
-                </p>
-                <p class="small-text project-desc">
-                    A full-stack middleman e-commerce platform connecting vendors and customers. &middot; Full-stack
-                    &middot; Stripe &middot; Cloudinary
-                </p>
-                <ul>
-                    <li>Team Lead &mdash; ran Agile sprints and oversaw end-to-end delivery; integrated Stripe for
-                        payments and Cloudinary for product-image storage.</li>
+                    <li>Reads broker PDFs in the browser and calculates FIFO capital gains per stock, checked against
+                        monthly statements, with unit tests for the parser and FIFO engine.</li>
+                    <li>No server or database, so trade data never leaves the machine. Unknown documents are rejected
+                        instead of guessed, since the numbers go into a tax return.</li>
                 </ul>
             </div>
 
@@ -488,7 +472,7 @@
                 <span class="skill-label">Frontend</span>
                 <span>React, Tailwind CSS, Vite</span>
                 <span class="skill-label">Backend &amp; Data</span>
-                <span>NestJS, FastAPI, Node.js, PostgreSQL, Redis, RAG</span>
+                <span>NestJS, FastAPI, Node.js, PostgreSQL, Firestore, Redis, RAG</span>
                 <span class="skill-label">Infrastructure</span>
                 <span>GCP, AWS, Docker, GitHub Actions</span>
             </div>
